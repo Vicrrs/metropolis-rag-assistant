@@ -19,13 +19,11 @@ async def fetch_and_save_text(base_url, links_file, output_dir):
                     response = await client.get(full_url)
                     response.raise_for_status()
 
-                    # Create full path for the output file, handling subdirectories
                     parsed_url = urlparse(link)
-                    file_path = parsed_url.path  # Get the full path from the URL
-                    output_filename = os.path.join(output_dir, file_path.lstrip("/")) + ".txt" # Create full path
+                    file_path = parsed_url.path
+                    output_filename = os.path.join(output_dir, file_path.lstrip("/")) + ".txt"
 
-                    # Create any necessary subdirectories
-                    os.makedirs(os.path.dirname(output_filename), exist_ok=True) # Create subdirectories
+                    os.makedirs(os.path.dirname(output_filename), exist_ok=True)
 
                     soup = BeautifulSoup(response.text, 'html.parser')
                     text = soup.get_text(strip=True)
