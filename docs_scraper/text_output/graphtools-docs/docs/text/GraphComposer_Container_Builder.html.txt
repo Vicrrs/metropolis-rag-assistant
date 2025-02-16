@@ -1,0 +1,409 @@
+Container Builder — DeepStream documentationSkip to main contentBack to topCtrl+KDeepStream documentationDeepStream documentationTable of ContentsDeepStream Getting StartedWelcome to the DeepStream DocumentationMigration GuideInstallationQuickstart GuideDocker ContainersDeepStream SamplesC/C++ Sample Apps Source DetailsPython Sample Apps and Bindings Source DetailsDeepStream Reference Application - deepstream-appDeepStream Reference Application - deepstream-test5 appDeepStream Reference Application - deepstream-nmos appDeepStream Reference Application on GitHubSample Configurations and StreamsImplementing a Custom GStreamer Plugin with OpenCV Integration ExampleTAO toolkit Integration with DeepStreamTAO Toolkit Integration with DeepStreamTutorials and How-to'sDeepStream-3D Custom Apps and Libs TutorialsDeepStream PerformancePerformanceDeepStream AccuracyAccuracy Tuning ToolsDeepStream Custom ModelUsing a Custom Model with DeepStreamDeepStream Key FeaturesDeepStream-3D Sensor Fusion Multi-Modal Application and FrameworkDeepStream-3D Multi-Modal BEVFusion SetupDeepStream-3D Multi-Modal V2XFusion SetupSmart Video RecordIoTOn the Fly Model UpdateNTP Timestamp in DeepStreamAV Sync in DeepStreamDeepStream With REST API SeverDeepStream 3D Action Recognition AppDeepStream 3D Depth Camera AppDeepStream 3D Lidar Inference AppNetworked Media Open Specifications (NMOS) in DeepStreamGst-nvdspostprocess in DeepStreamDeepStream Can Orientation AppDeepStream Application MigrationApplication Migration to DeepStream 7.1 from DeepStream 7.0DeepStream Plugin GuideGStreamer Plugin OverviewMetaData in the DeepStream SDKGst-nvdspreprocess (Alpha)Gst-nvinferGst-nvinferserverGst-nvtrackerGst-nvstreammuxGst-nvstreammux NewGst-nvstreamdemuxGst-nvmultistreamtilerGst-nvdsosdGst-nvdsmetautilsGst-nvdsvideotemplateGst-nvdsaudiotemplateGst-nvvideoconvertGst-nvdewarperGst-nvofGst-nvofvisualGst-nvsegvisualGst-nvvideo4linux2Gst-nvjpegdecGst-nvimagedecGst-nvjpegencGst-nvimageencGst-nvmsgconvGst-nvmsgbrokerGst-nvdsanalyticsGst-nvdsudpsrcGst-nvdsudpsinkGst-nvdspostprocess (Alpha)Gst-nvds3dfilterGst-nvds3dbridgeGst-nvds3dmixerGst-NvDsUcxGst-nvdsxferGst-nvvideotestsrcGst-nvmultiurisrcbinGst-nvurisrcbinDeepStream Troubleshooting and FAQTroubleshootingFrequently Asked QuestionsDeepStream On WSL2DeepStream On WSLFAQ for Deepstream On WSLDeepStream API GuideDeepStream API GuidesDeepStream Service MakerWhat is Deepstream Service MakerService Maker for C/C++ DevelopersService Maker for Python Developers(alpha)Quick Start GuideIntroduction to Flow APIsIntroduction to Pipeline APIsAdvanced FeaturesMigrating Traditional Deepstream Apps to Service Maker Apps in PythonWhat is a Deepstream Service Maker PluginDeepstream LibrariesDeepStream Libraries (Developer Preview)Graph ComposerOverviewPlatformsSupported platformsGetting StartedApplication Development WorkflowCreating an AI ApplicationReference graphsExtension Development WorkflowDeveloping Extensions for DeepStreamDeepStream ComponentsGXF InternalsGXF InternalsGraph eXecution EngineGraph Execution EngineGraph Composer ContainersGraph Composer and GXF ContainersGXF Component InterfacesGXF Component InterfacesGXF Application API'sGXF App C++ APIsGXF App Python APIsGXF Runtime API'sGXF Core C++ APIsGXF Core C APIsGXF Core Python APIsExtension ManualExtensionsCudaExtensionGXF Stream SyncStandardExtensionPython CodeletsNetworkExtensionNvTritonExtSerializationExtensionMultimediaExtensionVideoEncoderExtensionVideoDecoderExtensionBehavior TreesUCX ExtensionHttpExtensionGrpcExtensionTensorRTExtensionNvDs3dProcessingExtNvDsActionRecognitionExtNvDsAnalyticsExtNvDsBaseExtNvDsCloudMsgExtNvDsConverterExtNvDsDewarperExtNvDsInferenceExtNvDsInferenceUtilsExtNvDsInterfaceExtNvDsMuxDemuxExtNvDsOpticalFlowExtNvDsOutputSinkExtNvDsSampleExtNvDsSampleModelsExtNvDsSourceExtNvDsTemplateExtNvDsTrackerExtNvDsTranscodeExtNvDsTritonExtNvDsUcxExtNvDsUdpExtNvDsVisualizationExtToolsRegistryRegistry Command Line InterfaceComposerContainer BuilderGXF Command Line InterfacePipetuner GuideFAQ GuideFAQDeepStream Legal InformationDeepStream End User License AgreementDeepStream FeedbackFeedback formContainer BuilderContainer Builder#Container Builder (CB) is used to build docker images for AI Application graphs created using Composer. In addition to docker images, it can also push the final image into the cloud for deployment.Container Builder interacts withRegistry: to:Download extensions and other related files into your local system.Copy other required files specified in the config file to generate an intermediate work folder and an optimized dockerfile.Convert archives/packages dependencies and instructions into docker and try to build a minimal sized local image. For optimization, you can easily configure container builder to support multi-stage docker build.Container Builder supports graph installing and container image building on x86 Ubuntu systems. It can also build arm64 images from x86_64 platforms - to do this, you will need to install QEMU andbintutils.Prerequisites#Install right docker versionhttps://docs.docker.com/engine/install/ubuntu/log into the server which you might need pull/push images. Run:$dockerloginserver:portIf you need NGC images and resources, followhttps://ngc.nvidia.com/setup/api-keyto apply permission and getAPI_KEYtoken. Then run,$dockerloginnvcr.ioSome features (e.g. squash) might need docker experimental support. To enable that, update/etc/docker/daemon.jsonand add{"experimental":true}Then restart docker by running$sudosystemctlrestartdockerIf you want to build ARM docker images from x86_64 platform, then need to installQEMUandbinfmt. OS restart might be needed.$sudoapt-getinstallqemubinfmt-supportqemu-user-static$dockerrun--rm--privilegedmultiarch/qemu-user-static--reset-pyesTo verify if it is working, run$dockerrun--rm-tarm64v8/ubuntuuname-mInstall Graph Composer package. Make surecontainer_builderexecutable binary is installed.Container Builder Features#The image building is based on docker build. Container builder provides different stage models to build the image. There arecompile_stageandclean_stagemodels for users to select. Some features are applicable for one stage only. For more details, see the feature table.Container Builder features#FeaturesDescriptionStage
+(compile_stage/clean_stage)Local files/folders copyCopies local files/folders to the current image destination path.bothStage files/folders copyCopies files/folders from other target stages or other image to current image/stage destination path.bothMultiple deepstream graph files installationInstalls one or more deepstream graph files extensions and relevant files into imageN/A, final imageMultiple registry repo create/destroySpecifies multiple registry repo list to create and deleteN/A, final imagePackages installation by apt/pip3Installs debian package and pip3 packages onlinebothHTTP archives download and installationDownloads HTTP archives and runs custom commands thereafter.bothgit repo clone and custom buildClones specific branch/tag/commit from repo and does custom buildcompile_stage onlyMultiple Stage docker buildBuilder final target image from multiple stages.N/A, for final imageCustom cmdline runsRuns custom commands for on a image stageclean_stageDockerfile miscBase image Selection and other miscsWORKDIR/ENV/ENTRYPOINT/LABELclean_stagedocker build optionsSupports platforms, arguments, network, cache, squashN/A, for final imagePush Image to cloudPushes local built image to remote serverN/A, for final imageCross platform container buildSupports build other platforms(e.g. ARM64) containers from x86_64N/AContainer Builder Tool Usage#CB (container_builder) tool has very few input arguments. The config file collects all user settings as a YAML format text file. Briefly to generate a container, users need update the config file and run command line, wheregraph_target_keycan bex86oraarch64$container_builderbuild-cconfig.yaml-dgraph_target_keyContainer image can also be pushed to remote repository using command$container_builderpush-cconfig.yaml-dgraph_target.yamlSee more details of config settings from Configuration Specification. The graph target key corresponds to the graph target configuration, stored in file/opt/nvidia/graph-composer/graph_targets.yaml, which is used by registry during graph install. See registry cli graph install documentation for sample file.The default log print level is INFO and output stream displays on screen. log-level, log-file, and other arguments are used for debug. For more details, refer to help option from the following command$container_builder-hMultiarch Build#Additionally, CB tool can now build multiarch images. Users can use the following command to achieve the same$container_builderbuild-cconfig_file1.yamlconfig_file2.yaml-dtarget_key1target_key2-wd[workingdir]The users may also skip the target key mentioned in the command if they have specified the target within each of the config files as shown below:%YAML1.2---target:x86# optionalunique_stage:final_imagebase_image:autostage_model:clean_stageOne thing to note here is the multiarch feature requires the users to mention the docker push configurations as well; otherwise CB will fail to generate the final multiarch image.Run Container Builder#The following are a basic set of steps to build a container using an existing Container Builder configuration file and execute the container.Update the config file to start the build. Open/opt/nvidia/deepstream/deepstream/reference_graphs/deepstream-test1/ds_test1_container_builder_dgpu.yamlSpecify the right base image with correct DeepStream SDK version for thegraph_files. If base image is not specified, container builder will attempt to auto select it from a pool of
+predefined base images in/opt/nvidia/graph-composer/container_builder.yaml. The container which matches the graph target closest will be selectedbase_image:"nvcr.io/nvidia/deepstream:x.x-x"Specify the output image name indocker_buildsectiondocker_build:image_name:deepstream_test1_dgpu:nvgcb_testEnsure the gxf server has started by running the following command in a terminal:$systemctl--userstatusgxf_serverThe users can also run thegxf_serveron a different port by setting the environment variableGXF_SERVER_PORT.
+Currently, the Container Builder CLI only supports locally runninggxf_serverwhile Windows based users or GUI based Graph Composer users can set the remote address to connect to a remotely runninggxf_server.Run Container builder tool to build the image:$container_builderbuild-cds_test1_container_builder_dgpu.yaml-dx86-wd/opt/nvidia/deepstream/deepstream/reference_graphs/deepstream-test1/Verify the image and graph in container, use image in config file$dockerrun--gpusall-v/tmp/.X11-unix:/tmp/.X11-unix<image_name>Container Builder Configuration#The input config file for Container Builder is following YAML1.2 format ruleshttps://yaml.org/spec/1.2/spec.html.There are 2 major YAML document sections in the configuration settings.Container builder main control section - With that, users can specify graph installation options, build/push options and other host side control options. Each config file can have only one control section with key field container_builder: nameContainer dockerfile stage section - All the sections will be converted into dockerfiles. Users can specify multiple stage sections. There are 2 model templates for different stages.clean_stage model: This is the default model if not specified. The output container image must have a clean_stage section as final stage. Users should keep the final stage as clean as possible.compile_stage model: It is used to do some extra work such as build binaries from source code and to install some compile tools. It should be an intermediate stage, users can specify the clean_stage to copy required binaries from compile_stage.NoteYou must store private information safely when building docker images from container builders. Learn more details of docker referencehttps://docs.docker.com/engine/reference/builder/to avoid exposing critical layers to the public.
+MSB(Multi-stage build) is one of the best practices to separate internal source code stage and clean public stage. In container builder, users can use compile_stage to quickly start source code compiling and copy results to clean_stage for the final image. More details refer tohttps://docs.docker.com/develop/develop-images/multistage-build/A Basic Example of Container Builder Configuration#This example has 2 sections with aclean_stagebuild section and a main control section.During stage build:Starts frombase_imageand installs somedebian, python3 packages into the target imageInstalls archivesCopies files from local and other imageFinally do some cleanup and environment settings on output target image.The main control section would install the graph dependencies through registry into the target image. You can specify some build options to control the stage build and finally push the target image into the cloud.Here is the sample code with comments inline.# Container dockerfile Stage build section
+---
+# target: x86   # optional, can be used during multi-arch build
+unique_stage: final_image  # required, name must be unique
+# base_image is required
+base_image: "nvcr.io/nvidia/deepstream:7.1-triton-multiarch"
+stage_model: clean_stage # Optional
+
+# Install debian packages
+apt_deps:
+- curl
+- ca-certificates
+- tar
+- python3
+- python3-pip
+
+# Install pip3 packages
+pip3_deps:
+- PyYAML>=5.4.1
+
+# Copy local files to image
+local_copy_files:
+- src: "/opt/nvidia/graph-composer/gxe"
+  # dst: "/opt/nvidia/graph-composer/gxe"
+- src: "/opt/nvidia/graph-composer/libgxf_core.so"
+  # dst: "/opt/nvidia/graph-composer/libgxf_core.so"
+
+# Copy files from other images or other stages
+stage_copy_files:
+- src_stage: "nvcr.io/nvidia/deepstream:7.1-samples"
+  src: "/opt/nvidia/deepstream/deepstream/samples"
+  # dst: "/opt/nvidia/deepstream/deepstream/samples"
+
+# Download HTTP archives and install
+http_archives:
+- url: https://host:port/archive.tar.bz2
+  curl_option: "-u user:token"
+  post_cmd: "tar -jxvf archive.tar.bz2 -C /"
+
+# Clean up operations
+custom_runs:
+- "apt autoremove && ln -s /opt/nvidia/deepstream/deepstream/samples /samples"
+
+# Specify WORKDIR
+work_folder: /workspace/test/
+
+# Specify multiple ENV
+env_list:
+   PATH: "/opt/nvidia/graph-composer:$PATH"
+   LD_LIBRARY_PATH: "/opt/nvidia/graph-composer/:$LD_LIBRARY_PATH"
+
+# specify ENTRYPOINT
+#entrypoint: ["/opt/nvidia/graph-composer/gxe"]
+
+# Container Builder Main Control Section
+---  # delimiter required
+container_builder: main # required, any string is ok for name
+graph: # optional
+   graph_files: [deepstream-test1.yaml] # graph file in local
+   graph_dst: /workspace/test/  # destination path in target image
+
+   # extension manifest location in target image
+   manifest_dst: /workspace/test/
+
+   # extensions installed location in target image
+   ext_install_root: /workspace/test/
+
+# docker build options
+docker_build:
+   image_name: deepstream_test1:nvgcb_test
+   no_cache: true
+   squash: false
+
+# docker push list to cloud, optional
+# username/password are optional if $docker login already ran
+docker_push:
+-  url: "nvcr.io/nvidian/user/deepstream_test1:nvgcb_test"
+   Username:
+   password:A Multi-Stage Example#This example shows a multi-stage build. Thedownload_stagewithin compile_stage model would download all ONNX models from a private git repo withnetrcfile for permissions. The final image would copy a specific file out ofdownload_stageinto the final image location.
+Thedownload_stagewould be lost as some intermediate layers and the final image is clean to keep minimal dependencies and get rid ofnetrcfiles.# use compile_stage to download all models through git
+---
+unique_stage: download_stage
+base_image: "ubuntu:22.04"
+stage_model: compile_stage
+
+
+# copy netrc file into compile stage for git clone
+local_copy_files:
+- src: "/home/user/.netrc"
+  dst: "/root/.netrc"
+
+# download models into folder /download/models
+git_repo_list:
+- repo_folder: /downloads/models
+  url: https://privatehost/user/models #a private host require netrc
+  tag: master
+
+# use clean_stage for final image output
+---
+# Final Stage
+unique_stage: final_image
+base_image: "ubuntu:22.04"
+stage_model: clean_stage
+
+# copy a specific file out of download_stage into final_image
+stage_copy_files:
+- src_stage: "download_stage"
+  src: "/downloads/models/modelA.onnx"
+  dst: "/data/modelA.onnx"
+
+# Container builder main control settings
+---
+# Container Builder Config
+container_builder: builder_name # required
+docker_build:
+  image_name: "cb_multi_stage:cb_test"
+  # specify step orders in case multiple stages out of order
+  stage_steps: [download_stage, final_image]
+  no_cache: trueContainer builder main control section specification#NoteAll fields with/*dstends with ‘/’ means that is a folder path on the target image./*srcdepends on the real source path.Container Builder Control Specification#FieldsDescriptionType and RangeExample Notescontainer_builderThe control section namestring, requiredcontainer_builder:maingraphA dictionary with graph file, extension and registry settingdictionary, optionalgraph:graph_files:[test1.yaml]manifest_dst:/workspace/test/graph.graphfilesDeepstream gxf graph files in YAML format, which could be generated by Composerlist[string], required for graphgraph:graph_files:[test1.yaml,test2.yaml]graph.graph_dstDestination in target image for the graph files. If not provided, User can decide to copy from through stage buildstring, optionalgraph:graph_dst:/workspace/test1/Must specify a folder path if multiple graph_files exists.graph.manifest_dstDestination in target image for the manifest filesstring, required for graphgraph:manifest_dst:/workspace/test/Must specify a folder path if multiple graph_files exists.graph.ext_install_rootDestination in target image for graph extensions prefix directorystring, optionaldepends on registry behavior is not setgraph:ext_install_root:/opt/nvidia/graph-composerMust specify a folder pathdocker_build.image_nametarget image name with tagstring, optionalif absent, a random name would be useddocker_build:image_name:nvgcb_test:21.04docker_build.no_cacheBuild with cache or not
+Cache is disabled by defaultbool, optionaldocker_build:no_cache:truedocker_build.squashSquash image layers to reduce image size, need enable experimental in docker, check prerequisites.Note: not all layers support squash, if some layers failed, need disable squashbool, optionaldocker_build:squash:falsedocker_build.networkNetwork mode for docker buildstring, optionalDefault value ishostdocker_build:network:hostdocker_build.stage_stepsThe sequence of stage build sections, available when multi-stage build enabled.list[string], optionalIf disabled, default sequence is the order of stage sections---unique_stage:final_stage...---unique_stage:download_stage...---docker_build:stage_steps:[download_stage,final_stage]docker_pushA list of remote image repos for docker to push. each item have a url for remote repo with taglist[dict], optionalMust if you intend to use the multi-arch featuredocker_push:-url:"nvcr.io/user/repo1:cb_test1"-url:"gitlab/user/repo1:cb_test1"...docker_push.urlEach url is a remote image repo and tag names.string, required for docker_pushdocker_push:-url:"nvcr.io/user/repo1:cb_test1"docker_push.usernameusername to login the remote repo serverNote:it is not required if user already have ran $docker login server:portstring, optionaldocker_push:-url:"nvcr.io/user/repo1:cb_test1"username:<user>docker_push.passwordtext password to login the remote repo serverNote:it is not required if user already have ran $docker login server:portstring, optionaldocker_push:-url:"nvcr.io/user/repo1:cb_test1"username:<user>password:<password>docker_push.password_envA variable name of the global OS environment which stores the password. This can avoid user expose text password in config fileNote:it is not required if user already have ran $docker loginstring, optionaldocker_push:-url:"nvcr.io/user/repo1:cb_test1"username:<user>password_env:<TOKEN>debugSome debug info and reserve some intermediate statedictionary, optionaldebug:docker_file:/path/to/dockerfiledocker_folder:/path/to/docker_folderdebug.docker_filePreserve the generated dockerfile for debugstring, optionaldebug:docker_file:/path/to/dockerfiledebug.docker_folderPreserve the generated docker folder for debugstring, optionaldebug:docker_folder:/path/to/docker_folderContainer dockerfile stage section specification#The table below lists bothcompile_stageand clean_stage sections configuration specification. Most fields are common for both stage models. Only clean_stage should be used for the final stage. In addition, users should keep in mind stages ofcompile_stageare not optimized and may have extra packages and files not required for final output.NoteAll fields with*dstends with ‘/’ means that is a folder path on the target image.*srcdepends on the real source path.Container Builder Dockerfile Stage Specification#FieldsDescriptionType and
+RangeExample NotesStage
+compile_stage /
+clean_stagetargetA graph target key,
+which corresponds to a target configuration
+, used by registry during graph installstring,
+optional
+Choose fromx86aarch64target:x86bothunique_stageA unique
+name on the
+present stage,
+It is also used
+for dockerfile
+target namestring,
+requiredunique_stage:final_imagebothbase_imageSpecify a
+stage name or
+a remote/local
+image for
+which the
+current target
+stage is
+based on.string,
+Optionalbase_image:"ubuntu:22.04"For auto selection based on specified dependenciesbase_image:"auto"bothplatformSpecify the
+platform of the
+base_image
+in case it has
+same name in
+multiple
+platformsstring,
+optional
+Choose fromlinux/amd64linux/arm64Default
+value:
+linux/amd64platform:linux/amd64bothstage_modelWhich
+stage_model
+the config file
+would be
+used to build
+this stagestring,
+optional
+Choose
+fromclean_stagecompile_stageDefault
+value:
+clean_stagestage_model:clean_stagebothbuild_argsA dictionary of
+build
+arguments on
+top of the
+autogenerate
+d docker file.
+The
+arguments
+could be used
+for docker and
+other
+cmdlineslist[string],
+optionalbuild_args:CURL_PACK:"curl"apt_deps:-"$CURL_PACK"bothapt_depsA list of
+debian
+package
+names for apt
+installlist[string],
+optionalapt_deps:-curl-ca-certificates-zip=3.0-11build1bothpip3_depsA list of
+Python
+package
+names for
+pip3 install.
+Note: user
+need specify
+apt_deps to
+install
+python3-pip in
+config filelist[string],
+optionalpip3_deps:-PyGObject-PyYAML-resultbothresources_filesA list of resources
+files describing resources
+to copy to the containerlist[string],
+optionalresources_files:-resources1.yaml-resources2.yamlbothlocal_copy_filesA list file
+names to
+copy from
+local
+files/folders to
+destination
+path of stage
+imagelist[dict],
+optionallocal_copy_files:-src:"/opt/nvidia/graph-composer/gxe"dst:"/opt/nvidia/bin/"-src:deepstream-test1(afolderinlocal)dst:"/workspace/deepstream-test1"bothlocal_copy_files.srcSpecify a
+file/folder
+name in the
+local machine.
+A relative path
+is relative to
+the config filestring,
+optionallocal_copy_files:-src:"/opt/nvidia/graph-composer/gxe"dst:"/opt/nvidia/bin/"-src:deepstream-test1dst:"/workspace/deepstream-test1"bothlocal_copy_files.dstSpecify an
+absolute path
+location in the
+target image
+stage.
+If src is
+absolute path
+and dst is
+empty, dst
+would be
+same path as
+src
+Read note on
+top of the
+section about
+dst folders
+policystring,
+optionalLocal file examplelocal_copy_files:-src:"/opt/nvidia/graph-composer/gxe"dst:"/opt/nvidia/graph-composer/gxe"Alternatives for dst.1. dst is emptydst:dst:"/opt/nvidia/graph-composer"2. local folder examplelocal_copy_files:-src:"/opt/nvidia/samplefolder"dst:"/data/samplefolder"bothstage_copy_filesA list of
+StageCopyStr
+ucture to copy
+files across
+multiple
+stages and
+multiple
+imageslist[dict],
+optionalstage_copy_files:-src_stage:"nvcr.io/public/image:xxxx"src:"/opt/nvidia/samples"Anemptydstissameassrcpathbothstage_copy_files.src_stageSpecify a
+stage name or
+a image name
+where the src
+files come
+fromstring,
+optionalstage_copy_files:-src_stage:"nvcr.io/public/image:xxxx"src:"/opt/nvidia/samples"-src_stage:"<compile_stage_name>"src:"/opt/nvidia/bin"bothstage_copy_files.sr
+cSpecify a
+file/folder
+name in
+src_stage
+image/stage.
+Note:
+absolute path
+is
+recommended
+to avoid
+conflictsstring,
+optionalstage_copy_files:-src_stage:"nvcr.io/public/image:xxxx"src:"/opt/nvidia/samples"bothstage_copy_files.dstSpecify a file/folder name in target stage.Note: absolute path is recommended to avoid conflicts, an empty dst is same path as srcstring, optionaldefault: empty value is same path as srcstage_copy_files:-src_stage:"nvcr.io/public/image:xxxx"src:"/opt/nvidia/samples"dst:"/opt/nvidia/samples"bothhttp_archivesA list of HTTP archive structures to download and custom install.Note:
+Base image/stage should have curl/ca-certificates otherwise need users specify them in apt_deps.
+Archives are downloaded into a temp folder and later auto-cleaned. User need specify an absolute path for filename if don’t want it auto-cleanedlist[dict], optionalhttp_archives:-url:https://host/download/installer.shpost_cmd:"bash installer.sh"post_env:key:PATHvalue:"/root/bin:$PATH"-url:https://host/download/sample.mp4filename:/opt/nvidia/video/sample.mp4bothhttp_archives.urlSpecify a url to download the archivestring, required for http_archiveshttp_archives:-url:https://host/download/installer.shbothhttp_archives.filenameRename the downloaded file
+It could be:
+a. Empty, parse the last field in the url path as filename and download into a temporary folder and recycle later.
+b. A filename without a path will make the archive downloaded into a temporary folder and recycled later.
+c. An absolute path will make the archive downloaded into the path on the target image and keep it there without being recycled.
+d. A relative path is not supported and causes undefined results.string, optionalhttp_archives:-url:https://host/download/sample.mp4filename:/opt/nvidia/video/sample.mp4same ashttp_archives:-url:https://host/download/sample.mp4filename:sample.mp4post_cmd:"cp -a sample.mp4 /opt/nvidia/video/sample.mp4"bothhttp_archives.post_cmdSpecify how to install the archive during stage buildstring, optionalhttp_archives:-url:https://host/download/installer.shpost_cmd:"chmod a+x installer.sh && ./installer.sh"The default filename is installer.shbothhttp_archives.post_envSpecify a
+environment
+setting after
+download and
+install this
+archive
+The
+environment
+variable has a
+key:string and
+value:string.
+key and value
+settings must
+follow Linux
+Shell
+environment
+variable rulesdict[key,
+value],
+optional
+key:string
+value:
+stringRefine environment PATH=/root/bin:$PATHhttp_archives:-url:https://host/download/installer.shpost_cmd:"bash installer.sh"post_env:key:PATHvalue:"/root/bin:$PATH"bothhttp_archives.curl_optionSpecify extra
+curl
+options(e.g.
+permissions)
+while
+downloading
+archives.string,
+optionalhttp_archives:-url:https://host/download/sample.mp4curl_option:"-u user:token"filename:/data/sample.mp4An example copy netrc file to image
+for curl and remove after archives
+downloadedlocal_copy_files:-src:"/home/user/.netrc"dst:"/root/.netrc"http_archives:-url:https://host/download/sample.mp4curl_option:"-n"filename:/data/sample.mp4custom_runs:-"rm -rf /root/.netrc"bothgit_repo_listA list of git
+repo to clone,
+download and
+do custom
+build from
+source.
+User can use
+multi-stage
+config files to
+build source
+code and
+stage copy
+binaries to
+final stagelist[dict],
+optional---unique_stage:compile_1stage_model:compile_stagegit_repo_list:-url:https://github.com/org/projectrepo_folder:/workspace/projecttag:masterbuild_cmd:"./autogen.sh && make && make install"---unique_stage:finalstage_copy_files:-src_stage:compile_1src:"/usr/local/bin/binary"dst:"/usr/bin/binary"compile_stage onlygit_repo_list.urlSpecify a url
+to git fetch the
+repo souce
+codestring,
+required
+for
+git_repo_listgit_repo_list:-url:https://github.com/org/projectcompile_stage onlygit_repo_list.tagSpecify a
+exact
+tag/branch/co
+mmit-id of the
+git repo to
+fetchstring,
+required
+for
+git_repo_li
+stgit_repo_list:-url:https://github.com/org/projecttag:mastercompile_stage onlygit_repo_list.repo_folderSpecify
+abosulate
+folder path in
+target stage to
+store the repo
+filesstring,
+required
+for
+git_repo_li
+stgit_repo_list:-url:https://github.com/org/projecttag:masterrepo_folder:/workspace/projectcompile_stage onlygit_repo_list.build_cmdSpecify
+custom shell
+cmdline how
+to build and
+install the
+repo from
+sourcestring,
+optionalstage_model:compile_stagegit_repo_list:-url:https://github.com/org/projecttag:masterrepo_folder:/workspace/projectbuild_cmd:"./autogen.sh && make && make install"compile_stage onlyssh_key_host_copyEnable to
+automatically
+copy$HOME/.ssh/config$HOME/.ssh/id_rsainto compile
+stage/root/.ssh/and ssh-keyscan all
+host in
+git_repo_listNote:It is not
+recommended
+to use but
+could be
+useful for
+some git repo
+requires SSH
+keys.
+Users should
+be careful to
+enable it since
+it might
+expose the
+private key in
+the compile
+stage.string,
+optional
+Default
+value:
+falsessh_key_host_copy:truecompile_stage onlywork_folderSpecify
+workspace
+folder in
+image stage
+for default
+folder when
+launch the
+containerstring,
+optionalwork_folder:/workspace/deepstream/bothcustom_runsA list of
+custom RUNs
+at the end of
+the docker
+buildlist[string],
+optionallocal_copy_files:-src:"mypackage.deb"dst:"/tmp/"custom_runs:-"dpkg -i /tmp/mypackage.deb && rm -rf /tmp/*.deb"bothdisable_run_trueAuto
+generated
+dockerfile
+have a RUN
+true between
+each copy in
+locals and
+stages. It’s a
+workaround
+for docker
+build in some
+cases report
+copy errors.
+It is
+recommended
+to keep
+default value
+before
+docker’s fix
+but still keep
+an option for
+users to
+update.bool,
+optional
+Default
+value:
+falsedisable_run_true:falsebothenv_listSpecify a list
+of custom
+environment
+settings at the
+end of docker
+buildlist[string],
+optionalenv_list:PATH:"/opt/bin/:$PATH"LD_LIBRARY_PATH:"/opt/lib/:$LD_LIBRARY_PATH"DISPLAY:":0"clean_stage onlyentrypointSpecify a
+string list of
+entrypoint for
+the imagelist[string],
+optionalentrypoint:["/opt/bin/entrypoint.sh","param1"]clean_stage onlypreviousComposernextGXF Command Line InterfaceOn this pagePrerequisitesContainer Builder FeaturesContainer Builder Tool UsageMultiarch BuildRun Container BuilderContainer Builder ConfigurationA Basic Example of Container Builder ConfigurationA Multi-Stage ExampleContainer builder main control section specificationContainer dockerfile stage section specificationPrivacy Policy|Manage My Privacy|Do Not Sell or Share My Data|Terms of Service|Accessibility|Corporate Policies|Product Security|ContactCopyright © 2024-2025, NVIDIA Corporation.Last updated on Jan 13, 2025.
