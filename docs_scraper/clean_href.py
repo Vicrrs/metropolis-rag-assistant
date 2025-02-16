@@ -1,14 +1,6 @@
 import re
 
 def extract_href_values(input_file, output_file):
-    """
-    Extracts the href values from <a> tags in an HTML file and writes them to a new file.
-
-    Args:
-        input_file: Path to the input HTML file.
-        output_file: Path to the output file where href values will be written.
-    """
-
     try:
         with open(input_file, 'r', encoding='utf-8') as infile, open(output_file, 'w', encoding='utf-8') as outfile:
             for line in infile:
