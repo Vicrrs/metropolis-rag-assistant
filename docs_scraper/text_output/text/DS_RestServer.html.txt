@@ -1,0 +1,399 @@
+DeepStream With REST API Sever — DeepStream documentationSkip to main contentBack to topCtrl+KDeepStream documentationDeepStream documentationTable of ContentsDeepStream Getting StartedWelcome to the DeepStream DocumentationMigration GuideInstallationQuickstart GuideDocker ContainersDeepStream SamplesC/C++ Sample Apps Source DetailsPython Sample Apps and Bindings Source DetailsDeepStream Reference Application - deepstream-appDeepStream Reference Application - deepstream-test5 appDeepStream Reference Application - deepstream-nmos appDeepStream Reference Application on GitHubSample Configurations and StreamsImplementing a Custom GStreamer Plugin with OpenCV Integration ExampleTAO toolkit Integration with DeepStreamTAO Toolkit Integration with DeepStreamTutorials and How-to'sDeepStream-3D Custom Apps and Libs TutorialsDeepStream PerformancePerformanceDeepStream AccuracyAccuracy Tuning ToolsDeepStream Custom ModelUsing a Custom Model with DeepStreamDeepStream Key FeaturesDeepStream-3D Sensor Fusion Multi-Modal Application and FrameworkDeepStream-3D Multi-Modal BEVFusion SetupDeepStream-3D Multi-Modal V2XFusion SetupSmart Video RecordIoTOn the Fly Model UpdateNTP Timestamp in DeepStreamAV Sync in DeepStreamDeepStream With REST API SeverDeepStream 3D Action Recognition AppDeepStream 3D Depth Camera AppDeepStream 3D Lidar Inference AppNetworked Media Open Specifications (NMOS) in DeepStreamGst-nvdspostprocess in DeepStreamDeepStream Can Orientation AppDeepStream Application MigrationApplication Migration to DeepStream 7.1 from DeepStream 7.0DeepStream Plugin GuideGStreamer Plugin OverviewMetaData in the DeepStream SDKGst-nvdspreprocess (Alpha)Gst-nvinferGst-nvinferserverGst-nvtrackerGst-nvstreammuxGst-nvstreammux NewGst-nvstreamdemuxGst-nvmultistreamtilerGst-nvdsosdGst-nvdsmetautilsGst-nvdsvideotemplateGst-nvdsaudiotemplateGst-nvvideoconvertGst-nvdewarperGst-nvofGst-nvofvisualGst-nvsegvisualGst-nvvideo4linux2Gst-nvjpegdecGst-nvimagedecGst-nvjpegencGst-nvimageencGst-nvmsgconvGst-nvmsgbrokerGst-nvdsanalyticsGst-nvdsudpsrcGst-nvdsudpsinkGst-nvdspostprocess (Alpha)Gst-nvds3dfilterGst-nvds3dbridgeGst-nvds3dmixerGst-NvDsUcxGst-nvdsxferGst-nvvideotestsrcGst-nvmultiurisrcbinGst-nvurisrcbinDeepStream Troubleshooting and FAQTroubleshootingFrequently Asked QuestionsDeepStream On WSL2DeepStream On WSLFAQ for Deepstream On WSLDeepStream API GuideDeepStream API GuidesDeepStream Service MakerWhat is Deepstream Service MakerService Maker for C/C++ DevelopersService Maker for Python Developers(alpha)Quick Start GuideIntroduction to Flow APIsIntroduction to Pipeline APIsAdvanced FeaturesMigrating Traditional Deepstream Apps to Service Maker Apps in PythonWhat is a Deepstream Service Maker PluginDeepstream LibrariesDeepStream Libraries (Developer Preview)Graph ComposerOverviewPlatformsSupported platformsGetting StartedApplication Development WorkflowCreating an AI ApplicationReference graphsExtension Development WorkflowDeveloping Extensions for DeepStreamDeepStream ComponentsGXF InternalsGXF InternalsGraph eXecution EngineGraph Execution EngineGraph Composer ContainersGraph Composer and GXF ContainersGXF Component InterfacesGXF Component InterfacesGXF Application API'sGXF App C++ APIsGXF App Python APIsGXF Runtime API'sGXF Core C++ APIsGXF Core C APIsGXF Core Python APIsExtension ManualExtensionsCudaExtensionGXF Stream SyncStandardExtensionPython CodeletsNetworkExtensionNvTritonExtSerializationExtensionMultimediaExtensionVideoEncoderExtensionVideoDecoderExtensionBehavior TreesUCX ExtensionHttpExtensionGrpcExtensionTensorRTExtensionNvDs3dProcessingExtNvDsActionRecognitionExtNvDsAnalyticsExtNvDsBaseExtNvDsCloudMsgExtNvDsConverterExtNvDsDewarperExtNvDsInferenceExtNvDsInferenceUtilsExtNvDsInterfaceExtNvDsMuxDemuxExtNvDsOpticalFlowExtNvDsOutputSinkExtNvDsSampleExtNvDsSampleModelsExtNvDsSourceExtNvDsTemplateExtNvDsTrackerExtNvDsTranscodeExtNvDsTritonExtNvDsUcxExtNvDsUdpExtNvDsVisualizationExtToolsRegistryRegistry Command Line InterfaceComposerContainer BuilderGXF Command Line InterfacePipetuner GuideFAQ GuideFAQDeepStream Legal InformationDeepStream End User License AgreementDeepStream FeedbackFeedback formDeepStream...DeepStream With REST API Sever#DeepStream application supports runtime parameter configuration for certain components with the help of REST APIs. DeepStream application should run as a server for this feature.Rest Server support is enabled for both x86 (DeepStream-6.2 release onwards) and Jetson (DeepStream-6.3 release onwards).
+REST Server library integrates the HTTP server using the “Civetweb” OSS library to process the REST API endpoints.
+REST Server library implements various component specific endpoints handling.
+Also, REST API Payload Parser is integrated using the “jsoncpp” OSS library to parse JSON format payload.
+New nvmultiurisrcbin implements callback APIs for runtime parameter configuration of the supported components in the native DeepStream gstreamer pipeline.
+Upon receiving the HTTP POST request for the REST API, relevant callbacks implemented with the nvmultiurisrcbin creates new custom gstreamer events which gets injected into the native gstreamer pipeline.
+Applicable gstreamer component intercepts the custom event to runtime configure the relevant component in the native gstreamer pipeline. A sample appdeepstream-server-appis also provided at/opt/nvidia/deepstream/deepstream/sources/apps/sample_apps/deepstream-serverfor reference.
+These interfaces sources are available in the DeepStream SDK package.
+This should provide users with readily available infrastructure to define and implement their own custom REST APIs support for various DeepStream components (Please refer “How to add custom REST API support” section below).
+REST server is instantiated by default inside nvmultiurisrcbin plugin.Refer toGst-nvmultiurisrcbinfor “nvmultiurisrcbin” details.Features#The sample deepstream-server application can be used to demonstrate usage of REST APIs to configure DeepStream component parameters at runtime.
+Currently supported REST APIs to configure the DeepStream pipeline as mentioned below:NoteDS-6.4 onwards version support has been introduced with REST API. Currently supported version with DS-7.1 is/api/v1.DS-7.0 onwards supports REST API error handling, as per OpenAPI Specification (https://spec.openapis.org/oas/v3.0.3).The following table summarizes the supported REST APIs:Rest API support#Group/Component nameParameter updateStream specificStream addition and removalnvdspreprocessUpdate ROI for preprocessnvv4l2decoder“drop-frame-interval” and “skip-frame” property updatenvdsinfer“interval” property updatenvdsinferserver“interval” property updatenvv4l2encoder“force-idr”, “force-intra”,  “iframeinterval” and “bitrate” property updatenvstreammux“batched-push-timeout” property updatenvvideoconvert“src-crop”, “dest-crop”, “flip-method” and “interpolation-method” property updatenvdsosd“process-mode” property updateApplication specificApplication quitGET requestsGet the stream-infonvds_rest_server#nvds_rest_server is a custom DeepStream library open sourced with DeepStreamSDK package at/opt/nvidia/deepstream/deepstream/sources/libs/nvds_rest_server/.
+Users are encouraged to use this library as-is or make modifications to support custom use cases.
+This library could be integrated into a Gstreamer plugin, GStreamer bin, or a DeepStream application.
+With DS 6.2 release onwards, nvds_rest_server library is integrated withGst-nvmultiurisrcbinto support runtime sensor addition and removal over REST API.deepstream-server-app#Thedeepstream-server-appsample application is provided at/opt/nvidia/deepstream/deepstream/sources/apps/sample_apps/deepstream-server.
+The reference application demonstrates REST API usage to configure DeepStream plugin parameters at runtime using nvmultiurisrcbin or using low level nvds_rest_server library APIs directly.
+Refer to the README at/opt/nvidia/deepstream/deepstream/sources/apps/sample_apps/deepstream-server/READMEfor application usage, payload schema and REST API endpoints details.deepstream-server-app operates in two modes:REST server within nvmultiurisrcbin (default):To use nvmultiurisrcbin, setwithin_multiurisrcbin:1in therest-servergroup defined in dsserver_config.yml file. Paramters defined inmultiurisrcbingroup of dsserver_config.yml would be used by the application if simulation is done using nvmultiurisrcbin.
+All the REST API callbacks are implemented with nvmultiurisrcbin.REST server with the application:To use REST server with the application, setwithin_multiurisrcbin:0in thedsserver_config.ymlconfig file. Parameters defined inside groupserver-app-ctxof dsserver_config.yml would be used. All the REST API callbacks are implemented with the application.NoteThis application package containsdsserver_pgie_config.ymlanddsserver_config.ymlfiles. Thedsserver_config.ymlis used while launching the application.dsserver_pgie_config.ymlis used to configure pgie in the sample application.Expected behavior: The sample server app would run continuously even after EOS is received from the pipeline, as drop-pipeline-eos is set to TRUE (default ) in the config filedsserver_config.yml. However, if user needs to change this behavior, set ‘drop-pipeline-eos: 0’ of group ‘multiurisrcbin’ or ‘drop_pipeline_eos: 0’ of group ‘server-app-ctx’ defined indsserver_config.ymlfile to exit app at EOS.Sensor provisioning with deepstream-test5-app#The DeepStream config file parsing reference apps likedeepstream-test5-appsupport Sensor provisioning (runtime stream add/remove).
+For more details and sample config file to refer, please follow documentationhere.How to add custom REST API support#Users should follow the below sections. Each section explains detailed steps to implement new custom REST API support.REST API endpoints implementationCustom event generationCallback implementation for REST API endpointsREST API endpoints implementation#Define any component/group specific custom REST API endpoints.Register custom REST API endpoints.For 1 & 2, refer below source code snippet in/opt/nvidia/deepstream/deepstream/sources/libs/nvds_rest_server/nvds_rest_server.cpp:if(uri.find("/roi/update")!=std::string::npos){/* Pre-Process Specific */m_func[uri]=[roi_cb,uri](constJson::Value&req_info,constJson::Value&in,Json::Value&out,structmg_connection*conn){returnhandleUpdateROI(req_info,in,out,conn,roi_cb,uri);};}Define and implement the Handler function corresponding to the new custom REST API.Refer to the below source code snippet in/opt/nvidia/deepstream/deepstream/sources/libs/nvds_rest_server/nvds_rest_server.cpp:NvDsServerStatusCode
+handleUpdateROI (const Json::Value & req_info, const Json::Value & in,
+  Json::Value & response, struct mg_connection *conn,
+  std::function < void (NvDsServerRoiInfo * roi_ctx, void *ctx) > roi_cb,
+  std::string uri);Refer to theHandler Function Implementation Detailssection for more details.Register the Handler function for the new custom REST API with Civerweb’s  “httpServerHandler->addHandler” interface.Refer to the below source code snippet in/opt/nvidia/deepstream/deepstream/sources/libs/nvds_rest_server/nvds_rest_server.cpp:httpServerHandler->addHandler (it.first, new RequestHandler (it.first,
+        it.second));Define callback function to be used by REST server for the corresponding new custom REST API. The user needs to add callback function pointer as member of the struct NvDsServerCallbacks.Refer to the below source code snippet in/opt/nvidia/deepstream/deepstream/sources/libs/nvds_rest_server/nvds_rest_server.h:typedef struct NvDsServerCallbacks
+{
+  std::function < void (NvDsServerRoiInfo * roi_info, void *ctx) > roi_cb;
+  std::function < void (NvDsServerDecInfo * dec_info, void *ctx) > dec_cb;
+  std::function < void (NvDsServerEncInfo * enc_info, void *ctx) > enc_cb;
+  std::function < void (NvDsServerStreamInfo * stream_info,
+    void *ctx) > stream_cb;
+  std::function < void (NvDsServerInferInfo * infer_info,
+    void *ctx) > infer_cb;
+  std::function < void (NvDsServerConvInfo * conv_info, void *ctx) > conv_cb;
+  std::function < void (NvDsServerMuxInfo * mux_info, void *ctx) > mux_cb;
+  std::function < void (NvDsServerInferServerInfo * inferserver_info,
+    void *ctx) > inferserver_cb;
+  std::function < void (NvDsServerOsdInfo * osd_info, void *ctx) > osd_cb;
+  std::function < void (NvDsServerAppInstanceInfo * appinstance_info,
+    void *ctx) > appinstance_cb;
+  std::unordered_map <std::string, cb_func> custom_cb_endpt;
+} NvDsServerCallbacks;Handler Function Implementation Details#Define and implement a parser function to parse payload data received with the HTTP request for the new custom REST API. User may define new custom data structure (with nvds_rest_server.h) to hold the parsed payload data.Refer to the source code snippet in/opt/nvidia/deepstream/deepstream/sources/libs/nvds_rest_server/nvds_roi_parse.cppbool
+nvds_rest_roi_parse (const Json::Value & in, NvDsServerRoiInfo * roi_info)Call the defined callback providing input the payload parsed data and custom context pointer (if any).Based on the callback function return status received, create a JSON response to be sent for the received HTTP request.Refer to the below source code snippet in/opt/nvidia/deepstream/deepstream/sources/libs/nvds_rest_server/nvds_rest_server.cpp:if (nvds_rest_roi_parse (in, &roi_info) && (roi_cb)) {
+  roi_cb (&roi_info, &custom_ctx);
+  switch (roi_info.roi_flag) {
+    case ROI_UPDATE:
+      http_err_code = NvDsServerStatusCodeToHttpStatusCode(roi_info.err_info.code);
+      break;
+    default:
+      break;
+  }
+} else {
+  http_err_code = NvDsServerStatusCodeToHttpStatusCode(roi_info.err_info.code);
+}
+res_info.status = std::string ("HTTP/1.1 ") + std::to_string (http_err_code.first) +
+      " " + http_err_code.second;
+
+res_info.reason = roi_info.roi_log;
+
+response["status"] = res_info.status;
+response["reason"] = res_info.reason;Custom event generation#Define and implement new custom gst-event applicable for specific “element or group of elements” corresponding to handling of the new custom REST API.Refer to the below source code snippet in/opt/nvidia/deepstream/deepstream/sources/libs/gstnvdscustomhelper/gst-nvdscustomevent.cGstEvent *
+gst_nvevent_new_roi_update (gchar* stream_id, guint roi_count, RoiDimension *roi_dim)This custom gst-event to be injected into the native gstreamer pipeline by the gstnvdsmulturisrcbin.Callback implementation for REST API endpoints#Implement the callback function (as registered with the struct NvDsServerCallbacks) defined for the new custom REST API.If REST server is used with nvmultiurisrcbin, refer to the below source code snippet of/opt/nvidia/deepstream/deepstream/sources/gst-plugins/gst-nvmultiurisrcbin/gstdsnvmultiurisrcbin.cppstatic void s_roi_api_impl (NvDsServerRoiInfo * roi_info, void *ctx)If REST server is used with the application, refer to the below source code snippet of/opt/nvidia/deepstream/deepstream/sources/apps/sample_apps/deepstream-server/rest_server_callbacks.cppvoid s_roi_callback_impl (NvDsServerRoiInfo * roi_info, void *ctx)This callback function injects the new custom gst-event into the pipeline to be handled by corresponding gstreamer element or group of elements. Applicable gstreamer element or group of elements need to intercept this new custom gst-event at sink pad event handler and apply received configurations to the applicable element at runtime.Refer to the below source code snippet of/opt/nvidia/deepstream/deepstream/sources/gst-plugins/gst-nvmultiurisrcbin/gstdsnvmultiurisrcbin.cppGstEvent *nvevent = gst_nvevent_new_roi_update((char*)roi_info->stream_id.c_str(), roi_info->roi_count, roi_dim);
+if (!nvevent) {
+    roi_info->roi_log = "ROI_UPDATE_FAIL, nv-roi-update event creation failed";
+    roi_info->status = ROI_UPDATE_FAIL;
+    roi_info->err_info.code = StatusInternalServerError;
+}
+
+if (!gst_pad_push_event ((GstPad *) (nvmultiurisrcbin->bin_src_pad),
+          nvevent)) {
+  switch (roi_info->roi_flag) {
+    case ROI_UPDATE:
+      g_print ("[WARN] nv-roi-update event not pushed downstream.. !! \n");
+      roi_info->roi_log = "ROI_UPDATE_FAIL, nv-roi-update event not pushed";
+      roi_info->status = ROI_UPDATE_FAIL;
+      roi_info->err_info.code = StatusInternalServerError;
+      break;
+    default:
+      break;
+  }
+} else {
+  switch (roi_info->roi_flag) {
+    case ROI_UPDATE:
+      roi_info->status = ROI_UPDATE_SUCCESS;
+      roi_info->roi_log = "ROI_UPDATE_SUCCESS";
+      roi_info->err_info.code = StatusOk;
+      break;
+    default:
+      break;
+  }
+}In case the applicable element is already a part of the gstdsnvmultiurisrbin (e.g. decoder) then no such custom gst-events are required to be injected into the pipeline as all runtime configuration for the applicable gst-element can be handled from inside the gstdsnvmultiurisrcbin.Refer to the below source code snippet of/opt/nvidia/deepstream/deepstream/sources/gst-plugins/gst-nvmultiurisrcbin/gstdsnvmultiurisrcbin.cppif (!set_nvuribin_dec_prop (nvmultiurisrcbin->nvmultiurisrcbinCreator,
+        sourceId, dec_info)) {
+  switch (dec_info->dec_flag) {
+    case DROP_FRAME_INTERVAL:
+      g_print ("[WARN] drop-frame-interval not set on decoder .. !! \n");
+      dec_info->status = DROP_FRAME_INTERVAL_UPDATE_FAIL;
+      dec_info->dec_log = "DROP_FRAME_INTERVAL_UPDATE_FAIL, drop-frame-interval not set on decoder";
+      dec_info->err_info.code = StatusInternalServerError;
+      break;
+    case SKIP_FRAMES:
+      g_print ("[WARN] skip-frame not set on decoder .. !! \n");
+      dec_info->status = SKIP_FRAMES_UPDATE_FAIL;
+      dec_info->dec_log = "SKIP_FRAMES_UPDATE_FAIL, skip-frame not set on decoder";
+      dec_info->err_info.code = StatusInternalServerError;
+      break;
+    case LOW_LATENCY_MODE:
+      g_print ("[WARN] low-latency-mode not set on decoder .. !! \n");
+      dec_info->status = LOW_LATENCY_MODE_UPDATE_FAIL;
+      dec_info->dec_log = "LOW_LATENCY_MODE_UPDATE_FAIL, low-latency-mode not set on decoder";
+      dec_info->err_info.code = StatusInternalServerError;
+      break;
+    default:
+      break;
+  }
+} else {
+  switch (dec_info->dec_flag) {
+    case DROP_FRAME_INTERVAL:
+      dec_info->status =
+          dec_info->status !=
+          DROP_FRAME_INTERVAL_UPDATE_FAIL ? DROP_FRAME_INTERVAL_UPDATE_SUCCESS
+          : DROP_FRAME_INTERVAL_UPDATE_FAIL;
+      if ( dec_info->status == DROP_FRAME_INTERVAL_UPDATE_SUCCESS ){
+        dec_info->err_info.code = StatusOk;
+        dec_info->dec_log = "DROP_FRAME_INTERVAL_UPDATE_SUCCESS";
+      } else{
+        dec_info->err_info.code = StatusInternalServerError;
+        dec_info->dec_log = "DROP_FRAME_INTERVAL_UPDATE_FAIL, Error while setting drop-frame-interval property";
+      }
+      break;
+    case SKIP_FRAMES:
+      dec_info->status =
+          dec_info->status !=
+          SKIP_FRAMES_UPDATE_FAIL ? SKIP_FRAMES_UPDATE_SUCCESS :
+          SKIP_FRAMES_UPDATE_FAIL;
+      if ( dec_info->status == SKIP_FRAMES_UPDATE_SUCCESS ){
+        dec_info->err_info.code = StatusOk;
+        dec_info->dec_log = "SKIP_FRAMES_UPDATE_SUCCESS";
+      } else{
+        dec_info->err_info.code = StatusInternalServerError;
+        dec_info->dec_log = "SKIP_FRAMES_UPDATE_FAIL, Error while setting skip-frame property";
+      }
+      break;
+    case LOW_LATENCY_MODE:
+      dec_info->status =
+          dec_info->status !=
+          LOW_LATENCY_MODE_UPDATE_FAIL ? LOW_LATENCY_MODE_UPDATE_SUCCESS :
+          LOW_LATENCY_MODE_UPDATE_FAIL;
+      if ( dec_info->status == LOW_LATENCY_MODE_UPDATE_SUCCESS ){
+        dec_info->err_info.code = StatusOk;
+        dec_info->dec_log = "LOW_LATENCY_MODE_UPDATE_SUCCESS";
+      } else{
+        dec_info->err_info.code = StatusInternalServerError;
+        dec_info->dec_log = "LOW_LATENCY_MODE_UPDATE_FAIL, Error while setting skip-frame property";
+      }
+      break;
+    default:
+      break;
+  }
+}Schema and endpoints#NoteDS-7.1 supports REST API version/api/v1. Refer below schema details.Stream add/remove#Stream addEndpoint: /stream/addCurl command to add stream:1.curl -XPOST 'http://localhost:9000/api/v1/stream/add' -d '{
+  "key": "sensor",
+  "value": {
+      "camera_id": "uniqueSensorID1",
+      "camera_name": "front_door",
+      "camera_url": "file:///opt/nvidia/deepstream/deepstream/samples/streams/sample_1080p_h264.mp4",
+      "change": "camera_add",
+      "metadata": {
+          "resolution": "1920 x1080",
+          "codec": "h264",
+          "framerate": 30
+      }
+  },
+  "headers": {
+      "source": "vst",
+      "created_at": "2021-06-01T14:34:13.417Z"
+  }
+}'
+
+2.curl -XPOST 'http://localhost:9000/api/v1/stream/add' -d '{
+  "key": "sensor",
+  "event": {
+      "camera_id": "uniqueSensorID1",
+      "camera_name": "front_door",
+      "camera_url": "rtsp://xyz.mp4",
+      "change": "camera_streaming",
+      "metadata": {
+          "resolution": "1920 x1080",
+          "codec": "h264",
+          "framerate": 30
+      }
+  },
+  "headers": {
+      "source": "vst",
+      "created_at": "2021-06-01T14:34:13.417Z"
+  }
+}'Expected output: The uri specified should be added to the display.
+The camera_id should be unique for each newly added streams.
+The curl command mentioned above at (2), is only supported when the sample application uses nvmultiurisrcbin.Stream removeEndpoint: /stream/removeCurl command to remove streamcurl -XPOST 'http://localhost:9000/api/v1/stream/remove' -d '{
+  "key": "sensor",
+  "value": {
+      "camera_id": "uniqueSensorID1",
+      "camera_name": "front_door",
+      "camera_url": "file:///opt/nvidia/deepstream/deepstream/samples/streams/sample_1080p_h264.mp4",
+      "change": "camera_remove",
+      "metadata": {
+          "resolution": "1920 x1080",
+          "codec": "h264",
+          "framerate": 30
+      }
+  },
+  "headers": {
+      "source": "vst",
+      "created_at": "2021-06-01T14:34:13.417Z"
+  }
+}'Expected output: The uri specified should be removed from the display.
+The camera_id used to remove stream should be same as being used while adding stream using REST API.ROI#Endpoint: /roi/updateCurl command to update ROI:curl -XPOST 'http://localhost:9000/api/v1/roi/update' -d '{
+  "stream": {
+      "stream_id": "0",
+      "roi_count": 2,
+      "roi": [{
+              "roi_id": "0",
+              "left": 100,
+              "top": 300,
+              "width": 400,
+              "height": 400
+          },
+          {
+              "roi_id": "1",
+              "left": 550,
+              "top": 300,
+              "width": 500,
+              "height": 500
+          }
+      ]
+  }
+}'Expected output: The updated roi dimension should be observed at display.Decoder#Drop frame intervalEndpoint: /dec/drop-frame-intervalConfiguration values for “drop_frame_interval” field of the schema: Range [0 - 30]
+Curl command to configure decoder drop-frame-interval property:curl -XPOST 'http://localhost:9000/api/v1/dec/drop-frame-interval' -d '{
+"stream":
+  {
+      "stream_id":"0",
+      "drop_frame_interval":2
+  }
+}'Expected output: The drop-frame-interval value will be set on the decoder.
+Decoder drop frame interval should reflect with every interval <value> frame
+given by decoder, rest all dropped for selected stream.Skip frameEndpoint: /dec/skip-framesConfiguration values for “skip_frames” field of the schema:(0): - Decode all frames
+(1): - Decode non-ref frames
+(2): - Decode key framesCurl command to configure decoder skip-frames propertycurl -XPOST 'http://localhost:9000/api/v1/dec/skip-frames' -d '{
+"stream":
+  {
+      "stream_id":"0",
+      "skip_frames":2
+  }
+}'Expected output: The skip-frames property value will be set on the decoder.(0): - Decoder will decode all frames of the encoded bitstream
+(1): - Decoder will decode only non-reference frames of the encoded bitstream
+(2): - Decoder will decode only key frames of the encoded bitstreamNvinfer#Endpoint: /infer/set-intervalCurl command to configure nvinfer interval propertycurl -XPOST 'http://localhost:9000/api/v1/infer/set-interval' -d '{
+"stream":
+  {
+      "stream_id":"0",
+      "interval":2
+  }
+}'Expected output: The interval value will be set on the nvinfer.
+Interval value specify consecutive batches will be skipped for inference for
+the video stream.Disable/comment “input-tensor-meta” property in dsserver_pgie_config.yml
+to see “interval” property functionality of nvinfer/nvinferserver.
+Currently stream_id (specified in the schema) do not have any impact on specified
+stream_id, rather configuration is getting applied to all active streams.Nvinferserver#Endpoint:/inferserver/set-intervalCurl command to configure nvinferserver interval property:curl -XPOST 'http://localhost:9000/api/v1/inferserver/set-interval' -d '{
+"stream":
+  {
+      "stream_id":"0",
+      "interval":2
+  }
+}'Expected output: The interval value will be set on nvinferserver.
+Interval value specify consecutive batches will be skipped for inference for
+the video stream.Currently stream_id (specified in the schema) do not have any impact on specified
+stream_id, rather configuration is getting applied to all active streams.Encoder#NoteBy default encoder is disabled. To enable, set enable: 1 in the “encoder” group
+of dsserver_config.yml. Currently stream_id (specified in the schema) do not have
+any impact on specified stream_id, rather configuration is applied on
+muxed encoded bitstream.Force-idrEndpoint: /enc/force-idrConfiguration value for “force_idr” field of the schema:(1): - Force IDR frameCurl command to configure encoder force idr frame property:curl -XPOST 'http://localhost:9000/api/v1/enc/force-idr' -d '{
+"stream":
+  {
+      "stream_id":"0",
+      "force_idr":1
+  }
+}'Expected output: The force-idr property value will be set on the encoder.
+Encoder force-idr property should reflect with insertion of the IDR frame with the
+encoded bitstream by the encoder.Force-intraEndpoint: /enc/force-intraConfiguration value for “force_intra” field of the schema:(1): - Force Intra frameCurl command to configure encoder force intra frame propertycurl -XPOST 'http://localhost:9000/api/v1/enc/force-intra' -d '{
+"stream":
+  {
+      "stream_id":"0",
+      "force_intra":1
+  }
+}'Expected output: The force-intra property value will be set on the encoder.
+Encoder force-intra property should reflect with insertion of the intra frame with the
+encoded bitstream by the encoder.BitrateEndpoint: /enc/bitrateCurl command to configure encoder bitrate propertycurl -XPOST 'http://localhost:9000/api/v1/enc/bitrate' -d '{
+"stream":
+  {
+      "stream_id":"0",
+      "bitrate":2000000
+  }
+}'Convert generated .h264 elementary bitstream to mp4 file using below commands:$ ffmpeg -i out.h264 -vcodec copy out.mp4
+$ mediainfo out.mp4Expected output: Encoder should be reconfigured to use updated bitrate <value>
+and provide corresponding encoded bitstream. Mediainfo should show Encoder bitrate
+corresponding to updated value.iframeintervalEndpoint: /api/v1/enc/iframe-intervalCurl command to configure encoder iframeinterval property:curl -XPOST 'http://localhost:9000/api/v1/enc/iframe-interval' -d '{
+ "stream":
+   {
+       "stream_id":"0",
+       "iframeinterval":50
+   }
+ }'Expected output: The iframeinterval property value will be set on the encoder.
+Encoder iframeinterval property should reflect with insertion of the I-frame at
+specified interval with the encoded bitstream by the encoder.Streammux#Endpoint: /mux/batched-push-timeoutConfiguration value for “batched_push_timeout” field of the schema:(microseconds): - Timeout valueCurl command to configure streammux batched pushed timeout property:curl -XPOST 'http://localhost:9000/api/v1/mux/batched-push-timeout' -d '{
+"stream":
+  {
+      "batched_push_timeout":100000
+  }
+}'Applicable for old nvstreammux.
+Expected output: The batched push timeout property value will be set on the nvstreammux.
+nvstreammux property should reflect with the timeout in microseconds to wait after the
+first buffer is available to push the batch even if the complete batch is not formed.Nvvideoconvert#NoteTo simulate video convert specific REST API features,
+deepstream-server application explicitly disables passthrough mode using
+the “disbale-passthrough” property of nvvideoconvert  within the nvmultiurisrcbin.
+Set disable-passthrough: 1 in dsserver_config.yml file.src-cropEndpoint: /conv/srccrop
+Configuration value for “src_crop” field of the schema:
+(String) Pixel location left:top:width:heightCurl command to configure nvvideoconvert src-crop property:curl -XPOST 'http://localhost:9000/api/v1/conv/srccrop' -d '{
+"stream":
+  {
+      "stream_id":"0",
+      "src_crop":"200:200:400:500"
+  }
+}'Expected output: left:top:width:height of the input image which will be cropped
+and transformed into the output buffer.  If the crop location is out of bound
+the values will be clamped to image boundaries of the input image.dest-cropEndpoint: /conv/destcropConfiguration value for “dest_crop” field of the schema:
+(String) Pixel location left:top:width:heightCurl command to configure nvvideoconvert dest-crop property:curl -XPOST 'http://localhost:9000/api/v1/conv/destcrop' -d '{
+  "stream":
+    {
+        "stream_id":"0",
+        "dest_crop":"100:200:400:500"
+    }
+  }'
+
+Expected output: left:top:width:height is the location in the output image
+where the input image will be transformed.  If the crop location is out of
+bound the values will be clamped to image boundaries of the output image.
+The region apart from the cropped location in the destination frame will
+retain the last pixel values.flip-methodEndpoint: /conv/flip-methodConfiguration value for “flip_method” field of the schema:(0): none             - Identity (no rotation)
+(1): counterclockwise - Rotate counter-clockwise 90 degrees
+(2): rotate-180       - Rotate 180 degrees
+(3): clockwise        - Rotate clockwise 90 degrees
+(4): horizontal-flip  - Flip horizontally
+(5): upper-right-diagonal - Flip across upper right/lower left diagonal
+(6): vertical-flip    - Flip vertically
+(7): upper-left-diagonal - Flip across upper left/lower right diagonalCurl command to configure nvvideoconvert flip-method property:curl -XPOST 'http://localhost:9000/api/v1/conv/flip-method' -d '{
+"stream":
+  {
+      "stream_id":"0",
+      "flip_method":2
+  }
+}'Expected output: Based on flip-method property type value, output image should
+be flipped. For ex- For value 2, image will be rotated by 180 degree.interpolation-methodEndpoint: /conv/interpolation-methodConfiguration value for “interpolation_method” field of the schema:(0): Nearest          - Nearest
+(1): Bilinear         - Bilinear
+(2): Algo-1           - GPU - Cubic, VIC - 5 Tap
+(3): Algo-2           - GPU - Super, VIC - 10 Tap
+(4): Algo-3           - GPU - LanzoS, VIC - Smart
+(5): Algo-4           - GPU - Ignored, VIC - Nicest
+(6): Default          - GPU - Nearest, VIC - NearestCurl command to configure nvvideoconvert interpolation-method property:curl -XPOST 'http://localhost:9000/api/v1/conv/interpolation-method' -d '{
+"stream":
+  {
+      "stream_id":"0",
+      "interpolation_method":2
+  }
+}'Expected output: There would not be any visual change, but applied
+interpolation-method should be used for transformation.Nvdsosd#Endpoint: /osd/process-modeConfiguration value for “process_mode” field of the schema:0 and 1, 0=CPU mode, 1=GPU modeCurl command to configure nvdsosd process_mode property:curl -XPOST 'http://localhost:9000/api/v1/osd/process-mode' -d '{
+"stream":
+  {
+      "stream_id":"0",
+      "process_mode":0
+  }
+}'Expected output: There would not be any visual change, but applied
+process-mode should be used for drawing bounding boxes.Application Instance#Application quitEndpoint: /app/quitConfiguration value for “app_quit” field of the schema:
+(1): - Application quit (boolean)Curl command to quit the sample application:curl -XPOST 'http://localhost:9000/api/v1/app/quit' -d '{
+"stream":
+  {
+      "app_quit":1
+  }
+}'Expected output: The application should quit.GET requests#GET stream infoEndpoint: /api/v1/stream/get-stream-info
+Curl command to get the stream info:curl -XGET 'http://localhost:9000/api/v1/stream/get-stream-info'
+OR
+curl -XGET 'http://localhost:9000/api/v1/stream/get-stream-info' -d '{}'Expected output: The sample stream-info response returned to the client:{
+     "reason" : "GET_LIVE_STREAM_INFO_SUCCESS",
+     "status" : "HTTP/1.1 200 OK",
+     "stream-info" :
+     {
+             "stream-count" : 1,
+             "stream-info" :
+             [
+                     {
+                             "camera_id" : "UniqueSensorId1",
+                             "camera_name" : "UniqueSensorName1"
+                     }
+             ]
+     }
+}Limitations#REST API feature is validated with HTTP. HTTPS support is not yet enabled, however users can add HTTPS support by enhancing corresponding sources in DeepStream SDK.Usage of new nvstreammux for video and audio use cases are not supported at this time and might not work.REST API support for nvvidconvert and nvstreammux is currently only supported in mode where nvmultiurisrcbin is used in the pipeline. Refer dsserver_config.yml file present at deepstream-server-app source directory.MJPEG input stream source is not supported.Decoder REST API for skip-frame is not supported on Jetson. Currently on x86, skip-frame for value “(1): decode_non_ref” is not supported.previousAV Sync in DeepStreamnextDeepStream 3D Action Recognition AppOn this pageFeaturesnvds_rest_serverdeepstream-server-appSensor provisioning with deepstream-test5-appHow to add custom REST API supportREST API endpoints implementationHandler Function Implementation DetailsCustom event generationCallback implementation for REST API endpointsSchema and endpointsStream add/removeROIDecoderNvinferNvinferserverEncoderStreammuxNvvideoconvertNvdsosdApplication InstanceGET requestsLimitationsPrivacy Policy|Manage My Privacy|Do Not Sell or Share My Data|Terms of Service|Accessibility|Corporate Policies|Product Security|ContactCopyright © 2024-2025, NVIDIA Corporation.Last updated on Jan 13, 2025.
