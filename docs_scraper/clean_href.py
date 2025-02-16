@@ -12,8 +12,7 @@ def extract_href_values(input_file, output_file):
     try:
         with open(input_file, 'r', encoding='utf-8') as infile, open(output_file, 'w', encoding='utf-8') as outfile:
             for line in infile:
-                # Use regular expression to find href values within <a> tags
-                matches = re.findall(r'<a.*?href="([^"]*)".*?>', line)  #Improved regex to handle variations
+                matches = re.findall(r'<a.*?href="([^"]*)".*?>', line)
                 for match in matches:
                     outfile.write(match + '\n')
 
@@ -23,9 +22,8 @@ def extract_href_values(input_file, output_file):
         print(f"An error occurred: {e}")
 
 
-# Example usage:
 input_filename = '/home/vicrrs/projetos/meus_projetos/metropolis-rag-assistant/docs_scraper/deepstream_raw_html.txt'  # Replace with your input file name
-output_filename = 'links.txt'  # Replace with your desired output file name
+output_filename = 'links.txt'
 
 extract_href_values(input_filename, output_filename)
 

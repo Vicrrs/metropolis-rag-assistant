@@ -11,17 +11,14 @@ def save_filtered_li():
 
         soup = BeautifulSoup(response.text, 'html.parser')
 
-        # Alteração crucial: buscar href que começam com "text/" (sem os 3 pontos)
         matching_links = soup.find_all('a', href=lambda href: href and href.startswith('text/'))
 
-        # Coletar os elementos <li> pais únicos
         li_elements = []
         for link in matching_links:
             li = link.find_parent('li')
             if li and li not in li_elements:
                 li_elements.append(li)
 
-        # Salvar os conteúdos dos <li> em um arquivo txt
         with open("filtered_li_elements.txt", "w", encoding="utf-8") as f:
             for li in li_elements:
                 f.write(str(li) + "\n\n")
