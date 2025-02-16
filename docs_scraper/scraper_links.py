@@ -5,7 +5,6 @@ from urllib.parse import urlparse
 from bs4 import BeautifulSoup
 
 async def fetch_and_save_text(base_url, links_file, output_dir):
-
     try:
         with open(links_file, 'r', encoding='utf-8') as f:
             links = [line.strip() for line in f]
@@ -20,25 +19,28 @@ async def fetch_and_save_text(base_url, links_file, output_dir):
                     response = await client.get(full_url)
                     response.raise_for_status()
 
+                    # Create full path for the output file, handling subdirectories
                     parsed_url = urlparse(link)
-                    filename = os.path.basename(parsed_url.path)
-                    name, _ = os.path.splitext(filename)
+                    file_path = parsed_url.path  # Get the full path from the URL
+                    output_filename = os.path.join(output_dir, file_path.lstrip("/")) + ".txt" # Create full path
+
+                    # Create any necessary subdirectories
+                    os.makedirs(os.path.dirname(output_filename), exist_ok=True) # Create subdirectories
 
                     soup = BeautifulSoup(response.text, 'html.parser')
                     text = soup.get_text(strip=True)
 
-                    output_filename = os.path.join(output_dir, name + ".txt")
                     with open(output_filename, 'w', encoding='utf-8') as outfile:
                         outfile.write(text)
 
-                    print(f"Text content from '{full_url}' saved to '{output_filename}'")
+                    print(f"Text from '{full_url}' saved to '{output_filename}'")
 
                 except httpx.HTTPStatusError as e:
-                    print(f"Error fetching URL '{full_url}': {e}")
+                    print(f"Error fetching '{full_url}': {e}")
                 except httpx.RequestError as e:
-                    print(f"Error fetching URL '{full_url}': {e}")
+                    print(f"Error fetching '{full_url}': {e}")
                 except Exception as e:
-                    print(f"An error occurred: {e}")
+                    print(f"Error processing '{full_url}': {e}")
 
     except FileNotFoundError:
         print(f"Error: Links file '{links_file}' not found.")
