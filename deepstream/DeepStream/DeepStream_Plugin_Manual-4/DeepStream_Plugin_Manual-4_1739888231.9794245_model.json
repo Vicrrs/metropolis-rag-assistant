@@ -1,0 +1,7003 @@
+[
+    {
+        "layout_dets": [
+            {
+                "category_id": 5,
+                "poly": [
+                    298,
+                    577,
+                    1552,
+                    577,
+                    1552,
+                    895,
+                    298,
+                    895
+                ],
+                "score": 0.983,
+                "html": "<html><body><table><tr><td>Property</td><td>Meaning</td><td>Type and Range</td><td>Example and Notes</td><td>Platforms</td></tr><tr><td>gpu-id</td><td>DeviceIDofGPUtousefor decoding. Applicable only for Jetson;</td><td>Integer, 0to4,294,967,295</td><td>gpu-id=0</td><td>dGPU</td></tr><tr><td>DeepStream</td><td>required for outputting buffer with new NvBufSurface or Legacy Buffer</td><td>Boolean</td><td>DeepStream=1</td><td>Jetson</td></tr></table></body></html>"
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    297,
+                    1090,
+                    1505,
+                    1090,
+                    1505,
+                    1254,
+                    297,
+                    1254
+                ],
+                "score": 0.979
+            },
+            {
+                "category_id": 5,
+                "poly": [
+                    297,
+                    270,
+                    1029,
+                    270,
+                    1029,
+                    443,
+                    297,
+                    443
+                ],
+                "score": 0.978,
+                "html": "<html><body><table><tr><td>Feature</td><td>Description</td><td>Release</td></tr><tr><td>Supports JPEG Decode</td><td></td><td>DS 4.0</td></tr><tr><td>Supports MJPEGDecode</td><td></td><td>DS 4.0</td></tr></table></body></html>"
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    296,
+                    1686,
+                    1506,
+                    1686,
+                    1506,
+                    1848,
+                    296,
+                    1848
+                ],
+                "score": 0.976
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    297,
+                    1495,
+                    1499,
+                    1495,
+                    1499,
+                    1659,
+                    297,
+                    1659
+                ],
+                "score": 0.975
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    299,
+                    1388,
+                    1420,
+                    1388,
+                    1420,
+                    1470,
+                    299,
+                    1470
+                ],
+                "score": 0.954
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    301,
+                    1280,
+                    1361,
+                    1280,
+                    1361,
+                    1361,
+                    301,
+                    1361
+                ],
+                "score": 0.953
+            },
+            {
+                "category_id": 0,
+                "poly": [
+                    292,
+                    995,
+                    836,
+                    995,
+                    836,
+                    1053,
+                    292,
+                    1053
+                ],
+                "score": 0.944
+            },
+            {
+                "category_id": 0,
+                "poly": [
+                    295,
+                    509,
+                    1044,
+                    509,
+                    1044,
+                    564,
+                    295,
+                    564
+                ],
+                "score": 0.939
+            },
+            {
+                "category_id": 0,
+                "poly": [
+                    296,
+                    202,
+                    688,
+                    202,
+                    688,
+                    254,
+                    296,
+                    254
+                ],
+                "score": 0.916
+            },
+            {
+                "category_id": 2,
+                "poly": [
+                    297,
+                    2103,
+                    605,
+                    2103,
+                    605,
+                    2131,
+                    297,
+                    2131
+                ],
+                "score": 0.913
+            },
+            {
+                "category_id": 2,
+                "poly": [
+                    1148,
+                    2102,
+                    1500,
+                    2102,
+                    1500,
+                    2131,
+                    1148,
+                    2131
+                ],
+                "score": 0.908
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    296.0,
+                    1092.0,
+                    1443.0,
+                    1092.0,
+                    1443.0,
+                    1134.0,
+                    296.0,
+                    1134.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    296.0,
+                    1136.0,
+                    1472.0,
+                    1136.0,
+                    1472.0,
+                    1172.0,
+                    296.0,
+                    1172.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    295.0,
+                    1176.0,
+                    1505.0,
+                    1176.0,
+                    1505.0,
+                    1212.0,
+                    295.0,
+                    1212.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1219.0,
+                    720.0,
+                    1219.0,
+                    720.0,
+                    1257.0,
+                    297.0,
+                    1257.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    298.0,
+                    1688.0,
+                    1476.0,
+                    1688.0,
+                    1476.0,
+                    1725.0,
+                    298.0,
+                    1725.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    296.0,
+                    1730.0,
+                    1504.0,
+                    1730.0,
+                    1504.0,
+                    1768.0,
+                    296.0,
+                    1768.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    295.0,
+                    1770.0,
+                    1410.0,
+                    1770.0,
+                    1410.0,
+                    1809.0,
+                    295.0,
+                    1809.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    296.0,
+                    1814.0,
+                    573.0,
+                    1814.0,
+                    573.0,
+                    1846.0,
+                    296.0,
+                    1846.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1499.0,
+                    1493.0,
+                    1499.0,
+                    1493.0,
+                    1536.0,
+                    297.0,
+                    1536.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    299.0,
+                    1543.0,
+                    1424.0,
+                    1543.0,
+                    1424.0,
+                    1577.0,
+                    299.0,
+                    1577.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1584.0,
+                    1423.0,
+                    1584.0,
+                    1423.0,
+                    1618.0,
+                    297.0,
+                    1618.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    294.0,
+                    1621.0,
+                    392.0,
+                    1621.0,
+                    392.0,
+                    1662.0,
+                    294.0,
+                    1662.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1393.0,
+                    1410.0,
+                    1393.0,
+                    1410.0,
+                    1426.0,
+                    297.0,
+                    1426.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    296.0,
+                    1436.0,
+                    1249.0,
+                    1436.0,
+                    1249.0,
+                    1467.0,
+                    296.0,
+                    1467.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1282.0,
+                    1359.0,
+                    1282.0,
+                    1359.0,
+                    1322.0,
+                    297.0,
+                    1322.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    298.0,
+                    1327.0,
+                    887.0,
+                    1327.0,
+                    887.0,
+                    1359.0,
+                    298.0,
+                    1359.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    295.0,
+                    1004.0,
+                    830.0,
+                    1004.0,
+                    830.0,
+                    1048.0,
+                    295.0,
+                    1048.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    513.0,
+                    436.0,
+                    513.0,
+                    436.0,
+                    558.0,
+                    297.0,
+                    558.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    500.0,
+                    516.0,
+                    1044.0,
+                    516.0,
+                    1044.0,
+                    559.0,
+                    500.0,
+                    559.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    295.0,
+                    204.0,
+                    440.0,
+                    204.0,
+                    440.0,
+                    251.0,
+                    295.0,
+                    251.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    497.0,
+                    205.0,
+                    687.0,
+                    205.0,
+                    687.0,
+                    253.0,
+                    497.0,
+                    253.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    300.0,
+                    2106.0,
+                    606.0,
+                    2106.0,
+                    606.0,
+                    2131.0,
+                    300.0,
+                    2131.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    1150.0,
+                    2103.0,
+                    1500.0,
+                    2103.0,
+                    1500.0,
+                    2130.0,
+                    1150.0,
+                    2130.0
+                ],
+                "score": 1.0,
+                "text": ""
+            }
+        ],
+        "page_info": {
+            "page_no": 0,
+            "height": 2200,
+            "width": 1700
+        }
+    },
+    {
+        "layout_dets": [
+            {
+                "category_id": 3,
+                "poly": [
+                    305,
+                    202,
+                    1489,
+                    202,
+                    1489,
+                    892,
+                    305,
+                    892
+                ],
+                "score": 0.97
+            },
+            {
+                "category_id": 4,
+                "poly": [
+                    294,
+                    919,
+                    858,
+                    919,
+                    858,
+                    964,
+                    294,
+                    964
+                ],
+                "score": 0.926
+            },
+            {
+                "category_id": 0,
+                "poly": [
+                    296,
+                    1028,
+                    906,
+                    1028,
+                    906,
+                    1083,
+                    296,
+                    1083
+                ],
+                "score": 0.925
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    297,
+                    1733,
+                    942,
+                    1733,
+                    942,
+                    1773,
+                    297,
+                    1773
+                ],
+                "score": 0.921
+            },
+            {
+                "category_id": 0,
+                "poly": [
+                    297,
+                    1661,
+                    687,
+                    1661,
+                    687,
+                    1712,
+                    297,
+                    1712
+                ],
+                "score": 0.912
+            },
+            {
+                "category_id": 2,
+                "poly": [
+                    297,
+                    2103,
+                    605,
+                    2103,
+                    605,
+                    2131,
+                    297,
+                    2131
+                ],
+                "score": 0.904
+            },
+            {
+                "category_id": 2,
+                "poly": [
+                    1148,
+                    2102,
+                    1503,
+                    2102,
+                    1503,
+                    2130,
+                    1148,
+                    2130
+                ],
+                "score": 0.897
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    349,
+                    1514,
+                    1390,
+                    1514,
+                    1390,
+                    1594,
+                    349,
+                    1594
+                ],
+                "score": 0.831
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    321,
+                    1103,
+                    914,
+                    1103,
+                    914,
+                    1199,
+                    321,
+                    1199
+                ],
+                "score": 0.805
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    301,
+                    1457,
+                    453,
+                    1457,
+                    453,
+                    1494,
+                    301,
+                    1494
+                ],
+                "score": 0.666
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    306,
+                    1219,
+                    617,
+                    1219,
+                    617,
+                    1255,
+                    306,
+                    1255
+                ],
+                "score": 0.566
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    348,
+                    1270,
+                    624,
+                    1270,
+                    624,
+                    1435,
+                    348,
+                    1435
+                ],
+                "score": 0.549
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    317,
+                    1218,
+                    626,
+                    1218,
+                    626,
+                    1436,
+                    317,
+                    1436
+                ],
+                "score": 0.193
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    302,
+                    1103,
+                    442,
+                    1103,
+                    442,
+                    1140,
+                    302,
+                    1140
+                ],
+                "score": 0.119
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    349,
+                    1359,
+                    621,
+                    1359,
+                    621,
+                    1392,
+                    349,
+                    1392
+                ],
+                "score": 0.115
+            },
+            {
+                "category_id": 13,
+                "poly": [
+                    528,
+                    443,
+                    551,
+                    443,
+                    551,
+                    466,
+                    528,
+                    466
+                ],
+                "score": 0.48,
+                "latex": "^+"
+            },
+            {
+                "category_id": 13,
+                "poly": [
+                    1373,
+                    441,
+                    1396,
+                    441,
+                    1396,
+                    466,
+                    1373,
+                    466
+                ],
+                "score": 0.42,
+                "latex": "^+"
+            },
+            {
+                "category_id": 13,
+                "poly": [
+                    1466,
+                    377,
+                    1488,
+                    377,
+                    1488,
+                    400,
+                    1466,
+                    400
+                ],
+                "score": 0.37,
+                "latex": "^+"
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    922.0,
+                    853.0,
+                    922.0,
+                    853.0,
+                    961.0,
+                    297.0,
+                    961.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    296.0,
+                    1032.0,
+                    435.0,
+                    1032.0,
+                    435.0,
+                    1077.0,
+                    296.0,
+                    1077.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    498.0,
+                    1035.0,
+                    902.0,
+                    1035.0,
+                    902.0,
+                    1081.0,
+                    498.0,
+                    1081.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1734.0,
+                    938.0,
+                    1734.0,
+                    938.0,
+                    1772.0,
+                    297.0,
+                    1772.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1664.0,
+                    437.0,
+                    1664.0,
+                    437.0,
+                    1707.0,
+                    297.0,
+                    1707.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    498.0,
+                    1663.0,
+                    687.0,
+                    1663.0,
+                    687.0,
+                    1713.0,
+                    498.0,
+                    1713.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    300.0,
+                    2106.0,
+                    606.0,
+                    2106.0,
+                    606.0,
+                    2131.0,
+                    300.0,
+                    2131.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    1150.0,
+                    2105.0,
+                    1501.0,
+                    2105.0,
+                    1501.0,
+                    2130.0,
+                    1150.0,
+                    2130.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    393.0,
+                    1515.0,
+                    1388.0,
+                    1515.0,
+                    1388.0,
+                    1548.0,
+                    393.0,
+                    1548.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    394.0,
+                    1556.0,
+                    1274.0,
+                    1556.0,
+                    1274.0,
+                    1593.0,
+                    394.0,
+                    1593.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    346.0,
+                    1104.0,
+                    442.0,
+                    1104.0,
+                    442.0,
+                    1141.0,
+                    346.0,
+                    1141.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    398.0,
+                    1162.0,
+                    909.0,
+                    1162.0,
+                    909.0,
+                    1195.0,
+                    398.0,
+                    1195.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    342.0,
+                    1458.0,
+                    453.0,
+                    1458.0,
+                    453.0,
+                    1495.0,
+                    342.0,
+                    1495.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    346.0,
+                    1222.0,
+                    617.0,
+                    1222.0,
+                    617.0,
+                    1253.0,
+                    346.0,
+                    1253.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    399.0,
+                    1270.0,
+                    514.0,
+                    1270.0,
+                    514.0,
+                    1308.0,
+                    399.0,
+                    1308.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    396.0,
+                    1316.0,
+                    567.0,
+                    1316.0,
+                    567.0,
+                    1349.0,
+                    396.0,
+                    1349.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    396.0,
+                    1361.0,
+                    622.0,
+                    1361.0,
+                    622.0,
+                    1393.0,
+                    396.0,
+                    1393.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    398.0,
+                    1402.0,
+                    533.0,
+                    1402.0,
+                    533.0,
+                    1435.0,
+                    398.0,
+                    1435.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    348.0,
+                    1222.0,
+                    616.0,
+                    1222.0,
+                    616.0,
+                    1253.0,
+                    348.0,
+                    1253.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    397.0,
+                    1269.0,
+                    514.0,
+                    1269.0,
+                    514.0,
+                    1308.0,
+                    397.0,
+                    1308.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    396.0,
+                    1318.0,
+                    566.0,
+                    1318.0,
+                    566.0,
+                    1347.0,
+                    396.0,
+                    1347.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    395.0,
+                    1360.0,
+                    622.0,
+                    1360.0,
+                    622.0,
+                    1392.0,
+                    395.0,
+                    1392.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    397.0,
+                    1401.0,
+                    532.0,
+                    1401.0,
+                    532.0,
+                    1435.0,
+                    397.0,
+                    1435.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    342.0,
+                    1104.0,
+                    442.0,
+                    1104.0,
+                    442.0,
+                    1142.0,
+                    342.0,
+                    1142.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    397.0,
+                    1362.0,
+                    622.0,
+                    1362.0,
+                    622.0,
+                    1392.0,
+                    397.0,
+                    1392.0
+                ],
+                "score": 1.0,
+                "text": ""
+            }
+        ],
+        "page_info": {
+            "page_no": 1,
+            "height": 2200,
+            "width": 1700
+        }
+    },
+    {
+        "layout_dets": [
+            {
+                "category_id": 5,
+                "poly": [
+                    297,
+                    1084,
+                    1501,
+                    1084,
+                    1501,
+                    1905,
+                    297,
+                    1905
+                ],
+                "score": 0.986,
+                "html": "<html><body><table><tr><td>Property</td><td>Meaning</td><td>Type and Range</td><td>Example Notes</td><td>Platforms</td></tr><tr><td>config</td><td>Absolute pathname of a configuration file that defines static properties of various sensors, places, and modules.</td><td>String</td><td>config=msgconv_ config.txt or config=msgconv_ config.csv</td><td>dGPU Jetson</td></tr><tr><td>msg2p-lib</td><td>Absolute pathname of the library containing a custom implementation ofthe nvds_msg2p_* interface for custom payload generation.</td><td>String</td><td>msg2p-lib=libnvds_ msgconv_custom.so</td><td>dGPU Jetson</td></tr><tr><td>payload-type</td><td>Type of schema payload to be generated. Possible values are: PAYLOAD_DEEPSTREAM: Payload using DeepStream schema. PAYLOAD_DEEPSTREAM_MINI MAL: Payload using minimal DeepStream schema. PAYLOAD_CUSTOM: Payload using custom schemas.</td><td>Integer, 0 to 4,294,967,295</td><td>payload-type=0 or payload-type=257</td><td>dGPU Jetson</td></tr></table></body></html>"
+            },
+            {
+                "category_id": 5,
+                "poly": [
+                    296,
+                    259,
+                    1497,
+                    259,
+                    1497,
+                    801,
+                    296,
+                    801
+                ],
+                "score": 0.985,
+                "html": "<html><body><table><tr><td>Feature</td><td>Description</td><td>Release</td></tr><tr><td>Payload inJSONformat</td><td>Message payload is generated in JSON format</td><td>DS 3.0</td></tr><tr><td>Supports DeepStream schema specification</td><td>DeepStream schema specimplementation for messages</td><td>DS 3.0</td></tr><tr><td>Custom schema specification</td><td>Provision for custom schemas for messages</td><td>DS 3.0</td></tr><tr><td>Key-value file parsing for static properties</td><td>Read staticproperties of sensor/place/module in the form of key- valuepairfrom a textfile</td><td>DS 3.0</td></tr><tr><td>CSV file parsing for static properties</td><td>Read staticproperties of sensor/place/modulefromaCsVfile</td><td>DS 3.0</td></tr><tr><td>DeepStream4.0 minimalistic schema</td><td>MinimalvariationoftheDeepStream message schema</td><td>DS 4.0</td></tr></table></body></html>"
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    299,
+                    947,
+                    1169,
+                    947,
+                    1169,
+                    988,
+                    299,
+                    988
+                ],
+                "score": 0.921
+            },
+            {
+                "category_id": 6,
+                "poly": [
+                    296,
+                    199,
+                    1017,
+                    199,
+                    1017,
+                    241,
+                    296,
+                    241
+                ],
+                "score": 0.915
+            },
+            {
+                "category_id": 2,
+                "poly": [
+                    297,
+                    2103,
+                    605,
+                    2103,
+                    605,
+                    2131,
+                    297,
+                    2131
+                ],
+                "score": 0.907
+            },
+            {
+                "category_id": 2,
+                "poly": [
+                    1148,
+                    2102,
+                    1503,
+                    2102,
+                    1503,
+                    2131,
+                    1148,
+                    2131
+                ],
+                "score": 0.905
+            },
+            {
+                "category_id": 0,
+                "poly": [
+                    296,
+                    865,
+                    807,
+                    865,
+                    807,
+                    920,
+                    296,
+                    920
+                ],
+                "score": 0.691
+            },
+            {
+                "category_id": 0,
+                "poly": [
+                    297,
+                    1019,
+                    1015,
+                    1019,
+                    1015,
+                    1061,
+                    297,
+                    1061
+                ],
+                "score": 0.398
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    297,
+                    1019,
+                    1015,
+                    1019,
+                    1015,
+                    1061,
+                    297,
+                    1061
+                ],
+                "score": 0.264
+            },
+            {
+                "category_id": 6,
+                "poly": [
+                    297,
+                    1019,
+                    1015,
+                    1019,
+                    1015,
+                    1061,
+                    297,
+                    1061
+                ],
+                "score": 0.196
+            },
+            {
+                "category_id": 0,
+                "poly": [
+                    295,
+                    865,
+                    807,
+                    865,
+                    807,
+                    920,
+                    295,
+                    920
+                ],
+                "score": 0.136
+            },
+            {
+                "category_id": 13,
+                "poly": [
+                    1179,
+                    1189,
+                    1195,
+                    1189,
+                    1195,
+                    1208,
+                    1179,
+                    1208
+                ],
+                "score": 0.41,
+                "latex": "\\left|=\\right."
+            },
+            {
+                "category_id": 13,
+                "poly": [
+                    1179,
+                    1300,
+                    1195,
+                    1300,
+                    1195,
+                    1319,
+                    1179,
+                    1319
+                ],
+                "score": 0.41,
+                "latex": "\\left|=\\right."
+            },
+            {
+                "category_id": 13,
+                "poly": [
+                    1258,
+                    1674,
+                    1287,
+                    1674,
+                    1287,
+                    1700,
+                    1258,
+                    1700
+                ],
+                "score": 0.33,
+                "latex": "{\\tt=}0"
+            },
+            {
+                "category_id": 13,
+                "poly": [
+                    1255,
+                    1751,
+                    1313,
+                    1751,
+                    1313,
+                    1779,
+                    1255,
+                    1779
+                ],
+                "score": 0.27,
+                "latex": "\\scriptstyle=257"
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    949.0,
+                    1166.0,
+                    949.0,
+                    1166.0,
+                    988.0,
+                    297.0,
+                    988.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    296.0,
+                    200.0,
+                    1015.0,
+                    200.0,
+                    1015.0,
+                    240.0,
+                    296.0,
+                    240.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    300.0,
+                    2106.0,
+                    606.0,
+                    2106.0,
+                    606.0,
+                    2131.0,
+                    300.0,
+                    2131.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    1150.0,
+                    2104.0,
+                    1501.0,
+                    2104.0,
+                    1501.0,
+                    2129.0,
+                    1150.0,
+                    2129.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    296.0,
+                    870.0,
+                    437.0,
+                    870.0,
+                    437.0,
+                    915.0,
+                    296.0,
+                    915.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    500.0,
+                    872.0,
+                    803.0,
+                    872.0,
+                    803.0,
+                    919.0,
+                    500.0,
+                    919.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1020.0,
+                    1012.0,
+                    1020.0,
+                    1012.0,
+                    1061.0,
+                    297.0,
+                    1061.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1020.0,
+                    1012.0,
+                    1020.0,
+                    1012.0,
+                    1061.0,
+                    297.0,
+                    1061.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1020.0,
+                    1012.0,
+                    1020.0,
+                    1012.0,
+                    1061.0,
+                    297.0,
+                    1061.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    296.0,
+                    870.0,
+                    436.0,
+                    870.0,
+                    436.0,
+                    915.0,
+                    296.0,
+                    915.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    500.0,
+                    872.0,
+                    803.0,
+                    872.0,
+                    803.0,
+                    919.0,
+                    500.0,
+                    919.0
+                ],
+                "score": 1.0,
+                "text": ""
+            }
+        ],
+        "page_info": {
+            "page_no": 2,
+            "height": 2200,
+            "width": 1700
+        }
+    },
+    {
+        "layout_dets": [
+            {
+                "category_id": 5,
+                "poly": [
+                    298,
+                    198,
+                    1503,
+                    198,
+                    1503,
+                    410,
+                    298,
+                    410
+                ],
+                "score": 0.981,
+                "html": "<html><body><table><tr><td>Property</td><td>Meaning</td><td>TypeandRange</td><td>Example Notes</td><td>Platforms</td></tr><tr><td>comp-id</td><td>Component ID of the plugin fromwhichmetadataistobe processed.</td><td>Integer, 0to4,294,967,295</td><td>comp-id=2 Defaultis NvDsEventMsgMeta</td><td>dGPU Jetson</td></tr></table></body></html>"
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    296,
+                    1157,
+                    1431,
+                    1157,
+                    1431,
+                    1322,
+                    296,
+                    1322
+                ],
+                "score": 0.975
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    297,
+                    1815,
+                    1486,
+                    1815,
+                    1486,
+                    1936,
+                    297,
+                    1936
+                ],
+                "score": 0.972
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    298,
+                    1347,
+                    1476,
+                    1347,
+                    1476,
+                    1470,
+                    298,
+                    1470
+                ],
+                "score": 0.958
+            },
+            {
+                "category_id": 0,
+                "poly": [
+                    296,
+                    1075,
+                    1125,
+                    1075,
+                    1125,
+                    1131,
+                    296,
+                    1131
+                ],
+                "score": 0.948
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    295,
+                    557,
+                    1233,
+                    557,
+                    1233,
+                    596,
+                    295,
+                    596
+                ],
+                "score": 0.944
+            },
+            {
+                "category_id": 0,
+                "poly": [
+                    293,
+                    1718,
+                    889,
+                    1718,
+                    889,
+                    1777,
+                    293,
+                    1777
+                ],
+                "score": 0.944
+            },
+            {
+                "category_id": 0,
+                "poly": [
+                    295,
+                    476,
+                    979,
+                    476,
+                    979,
+                    529,
+                    295,
+                    529
+                ],
+                "score": 0.942
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    297,
+                    1495,
+                    1476,
+                    1495,
+                    1476,
+                    1618,
+                    297,
+                    1618
+                ],
+                "score": 0.941
+            },
+            {
+                "category_id": 2,
+                "poly": [
+                    297,
+                    2103,
+                    605,
+                    2103,
+                    605,
+                    2131,
+                    297,
+                    2131
+                ],
+                "score": 0.91
+            },
+            {
+                "category_id": 2,
+                "poly": [
+                    1148,
+                    2102,
+                    1502,
+                    2102,
+                    1502,
+                    2131,
+                    1148,
+                    2131
+                ],
+                "score": 0.906
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    294,
+                    928,
+                    1484,
+                    928,
+                    1484,
+                    1009,
+                    294,
+                    1009
+                ],
+                "score": 0.887
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    301,
+                    613,
+                    1495,
+                    613,
+                    1495,
+                    733,
+                    301,
+                    733
+                ],
+                "score": 0.573
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    302,
+                    739,
+                    1500,
+                    739,
+                    1500,
+                    903,
+                    302,
+                    903
+                ],
+                "score": 0.522
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    299,
+                    613,
+                    1497,
+                    613,
+                    1497,
+                    902,
+                    299,
+                    902
+                ],
+                "score": 0.416
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1158.0,
+                    1427.0,
+                    1158.0,
+                    1427.0,
+                    1198.0,
+                    297.0,
+                    1198.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    296.0,
+                    1197.0,
+                    1333.0,
+                    1197.0,
+                    1333.0,
+                    1242.0,
+                    296.0,
+                    1242.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1242.0,
+                    1405.0,
+                    1242.0,
+                    1405.0,
+                    1277.0,
+                    297.0,
+                    1277.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1281.0,
+                    470.0,
+                    1281.0,
+                    470.0,
+                    1325.0,
+                    297.0,
+                    1325.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    298.0,
+                    1817.0,
+                    1426.0,
+                    1817.0,
+                    1426.0,
+                    1856.0,
+                    298.0,
+                    1856.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    298.0,
+                    1860.0,
+                    1469.0,
+                    1860.0,
+                    1469.0,
+                    1893.0,
+                    298.0,
+                    1893.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1902.0,
+                    1484.0,
+                    1902.0,
+                    1484.0,
+                    1935.0,
+                    297.0,
+                    1935.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    300.0,
+                    1353.0,
+                    1475.0,
+                    1353.0,
+                    1475.0,
+                    1388.0,
+                    300.0,
+                    1388.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1392.0,
+                    1402.0,
+                    1392.0,
+                    1402.0,
+                    1431.0,
+                    297.0,
+                    1431.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    299.0,
+                    1434.0,
+                    1475.0,
+                    1434.0,
+                    1475.0,
+                    1473.0,
+                    299.0,
+                    1473.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1081.0,
+                    436.0,
+                    1081.0,
+                    436.0,
+                    1125.0,
+                    297.0,
+                    1125.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    498.0,
+                    1083.0,
+                    1121.0,
+                    1083.0,
+                    1121.0,
+                    1128.0,
+                    498.0,
+                    1128.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    296.0,
+                    558.0,
+                    1231.0,
+                    558.0,
+                    1231.0,
+                    597.0,
+                    296.0,
+                    597.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    293.0,
+                    1726.0,
+                    886.0,
+                    1726.0,
+                    886.0,
+                    1772.0,
+                    293.0,
+                    1772.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    481.0,
+                    439.0,
+                    481.0,
+                    439.0,
+                    524.0,
+                    297.0,
+                    524.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    500.0,
+                    483.0,
+                    977.0,
+                    483.0,
+                    977.0,
+                    523.0,
+                    500.0,
+                    523.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    295.0,
+                    1495.0,
+                    1224.0,
+                    1495.0,
+                    1224.0,
+                    1537.0,
+                    295.0,
+                    1537.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    296.0,
+                    1543.0,
+                    1469.0,
+                    1543.0,
+                    1469.0,
+                    1577.0,
+                    296.0,
+                    1577.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    299.0,
+                    1583.0,
+                    571.0,
+                    1583.0,
+                    571.0,
+                    1614.0,
+                    299.0,
+                    1614.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    300.0,
+                    2106.0,
+                    606.0,
+                    2106.0,
+                    606.0,
+                    2131.0,
+                    300.0,
+                    2131.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    1150.0,
+                    2104.0,
+                    1501.0,
+                    2104.0,
+                    1501.0,
+                    2129.0,
+                    1150.0,
+                    2129.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    298.0,
+                    930.0,
+                    1487.0,
+                    930.0,
+                    1487.0,
+                    970.0,
+                    298.0,
+                    970.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    298.0,
+                    973.0,
+                    666.0,
+                    973.0,
+                    666.0,
+                    1008.0,
+                    298.0,
+                    1008.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    343.0,
+                    618.0,
+                    1487.0,
+                    618.0,
+                    1487.0,
+                    657.0,
+                    343.0,
+                    657.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    348.0,
+                    661.0,
+                    1424.0,
+                    661.0,
+                    1424.0,
+                    695.0,
+                    348.0,
+                    695.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    347.0,
+                    700.0,
+                    1021.0,
+                    700.0,
+                    1021.0,
+                    738.0,
+                    347.0,
+                    738.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    343.0,
+                    741.0,
+                    1404.0,
+                    741.0,
+                    1404.0,
+                    780.0,
+                    343.0,
+                    780.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    347.0,
+                    785.0,
+                    1497.0,
+                    785.0,
+                    1497.0,
+                    820.0,
+                    347.0,
+                    820.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    347.0,
+                    822.0,
+                    1488.0,
+                    822.0,
+                    1488.0,
+                    862.0,
+                    347.0,
+                    862.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    344.0,
+                    864.0,
+                    1196.0,
+                    864.0,
+                    1196.0,
+                    905.0,
+                    344.0,
+                    905.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    344.0,
+                    618.0,
+                    1486.0,
+                    618.0,
+                    1486.0,
+                    656.0,
+                    344.0,
+                    656.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    346.0,
+                    658.0,
+                    1424.0,
+                    658.0,
+                    1424.0,
+                    695.0,
+                    346.0,
+                    695.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    346.0,
+                    701.0,
+                    1021.0,
+                    701.0,
+                    1021.0,
+                    737.0,
+                    346.0,
+                    737.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    345.0,
+                    744.0,
+                    1404.0,
+                    744.0,
+                    1404.0,
+                    778.0,
+                    345.0,
+                    778.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    348.0,
+                    786.0,
+                    1500.0,
+                    786.0,
+                    1500.0,
+                    820.0,
+                    348.0,
+                    820.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    346.0,
+                    822.0,
+                    1490.0,
+                    822.0,
+                    1490.0,
+                    863.0,
+                    346.0,
+                    863.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    344.0,
+                    864.0,
+                    1197.0,
+                    864.0,
+                    1197.0,
+                    906.0,
+                    344.0,
+                    906.0
+                ],
+                "score": 1.0,
+                "text": ""
+            }
+        ],
+        "page_info": {
+            "page_no": 3,
+            "height": 2200,
+            "width": 1700
+        }
+    },
+    {
+        "layout_dets": [
+            {
+                "category_id": 3,
+                "poly": [
+                    308,
+                    312,
+                    1490,
+                    312,
+                    1490,
+                    1112,
+                    308,
+                    1112
+                ],
+                "score": 0.965
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    298,
+                    200,
+                    1440,
+                    200,
+                    1440,
+                    284,
+                    298,
+                    284
+                ],
+                "score": 0.938
+            },
+            {
+                "category_id": 0,
+                "poly": [
+                    296,
+                    1248,
+                    905,
+                    1248,
+                    905,
+                    1303,
+                    296,
+                    1303
+                ],
+                "score": 0.923
+            },
+            {
+                "category_id": 4,
+                "poly": [
+                    295,
+                    1139,
+                    885,
+                    1139,
+                    885,
+                    1184,
+                    295,
+                    1184
+                ],
+                "score": 0.923
+            },
+            {
+                "category_id": 0,
+                "poly": [
+                    297,
+                    1883,
+                    687,
+                    1883,
+                    687,
+                    1934,
+                    297,
+                    1934
+                ],
+                "score": 0.911
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    296,
+                    1955,
+                    1224,
+                    1955,
+                    1224,
+                    1994,
+                    296,
+                    1994
+                ],
+                "score": 0.901
+            },
+            {
+                "category_id": 2,
+                "poly": [
+                    297,
+                    2102,
+                    605,
+                    2102,
+                    605,
+                    2132,
+                    297,
+                    2132
+                ],
+                "score": 0.9
+            },
+            {
+                "category_id": 2,
+                "poly": [
+                    1148,
+                    2101,
+                    1503,
+                    2101,
+                    1503,
+                    2131,
+                    1148,
+                    2131
+                ],
+                "score": 0.898
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    311,
+                    1322,
+                    821,
+                    1322,
+                    821,
+                    1418,
+                    311,
+                    1418
+                ],
+                "score": 0.725
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    343,
+                    1721,
+                    875,
+                    1721,
+                    875,
+                    1817,
+                    343,
+                    1817
+                ],
+                "score": 0.576
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    307,
+                    1436,
+                    612,
+                    1436,
+                    612,
+                    1699,
+                    307,
+                    1699
+                ],
+                "score": 0.275
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    303,
+                    1720,
+                    452,
+                    1720,
+                    452,
+                    1756,
+                    303,
+                    1756
+                ],
+                "score": 0.234
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    304,
+                    1440,
+                    617,
+                    1440,
+                    617,
+                    1475,
+                    304,
+                    1475
+                ],
+                "score": 0.199
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    349,
+                    1492,
+                    569,
+                    1492,
+                    569,
+                    1699,
+                    349,
+                    1699
+                ],
+                "score": 0.194
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    350,
+                    1777,
+                    873,
+                    1777,
+                    873,
+                    1816,
+                    350,
+                    1816
+                ],
+                "score": 0.101
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    296.0,
+                    202.0,
+                    1441.0,
+                    202.0,
+                    1441.0,
+                    246.0,
+                    296.0,
+                    246.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    245.0,
+                    785.0,
+                    245.0,
+                    785.0,
+                    287.0,
+                    297.0,
+                    287.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    295.0,
+                    1251.0,
+                    435.0,
+                    1251.0,
+                    435.0,
+                    1299.0,
+                    295.0,
+                    1299.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    499.0,
+                    1255.0,
+                    902.0,
+                    1255.0,
+                    902.0,
+                    1301.0,
+                    499.0,
+                    1301.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    298.0,
+                    1143.0,
+                    881.0,
+                    1143.0,
+                    881.0,
+                    1181.0,
+                    298.0,
+                    1181.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1886.0,
+                    438.0,
+                    1886.0,
+                    438.0,
+                    1929.0,
+                    297.0,
+                    1929.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    498.0,
+                    1885.0,
+                    687.0,
+                    1885.0,
+                    687.0,
+                    1935.0,
+                    498.0,
+                    1935.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    294.0,
+                    1955.0,
+                    1223.0,
+                    1955.0,
+                    1223.0,
+                    1995.0,
+                    294.0,
+                    1995.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    300.0,
+                    2106.0,
+                    606.0,
+                    2106.0,
+                    606.0,
+                    2131.0,
+                    300.0,
+                    2131.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    1150.0,
+                    2105.0,
+                    1502.0,
+                    2105.0,
+                    1502.0,
+                    2130.0,
+                    1150.0,
+                    2130.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    340.0,
+                    1325.0,
+                    440.0,
+                    1325.0,
+                    440.0,
+                    1359.0,
+                    340.0,
+                    1359.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    398.0,
+                    1382.0,
+                    818.0,
+                    1382.0,
+                    818.0,
+                    1414.0,
+                    398.0,
+                    1414.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    347.0,
+                    1721.0,
+                    454.0,
+                    1721.0,
+                    454.0,
+                    1758.0,
+                    347.0,
+                    1758.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    396.0,
+                    1779.0,
+                    874.0,
+                    1779.0,
+                    874.0,
+                    1813.0,
+                    396.0,
+                    1813.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    348.0,
+                    1443.0,
+                    615.0,
+                    1443.0,
+                    615.0,
+                    1473.0,
+                    348.0,
+                    1473.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    397.0,
+                    1490.0,
+                    513.0,
+                    1490.0,
+                    513.0,
+                    1526.0,
+                    397.0,
+                    1526.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    399.0,
+                    1540.0,
+                    549.0,
+                    1540.0,
+                    549.0,
+                    1566.0,
+                    399.0,
+                    1566.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    396.0,
+                    1582.0,
+                    566.0,
+                    1582.0,
+                    566.0,
+                    1608.0,
+                    396.0,
+                    1608.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    396.0,
+                    1622.0,
+                    533.0,
+                    1622.0,
+                    533.0,
+                    1653.0,
+                    396.0,
+                    1653.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    396.0,
+                    1664.0,
+                    495.0,
+                    1664.0,
+                    495.0,
+                    1698.0,
+                    396.0,
+                    1698.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    343.0,
+                    1721.0,
+                    454.0,
+                    1721.0,
+                    454.0,
+                    1758.0,
+                    343.0,
+                    1758.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    340.0,
+                    1439.0,
+                    617.0,
+                    1439.0,
+                    617.0,
+                    1476.0,
+                    340.0,
+                    1476.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    398.0,
+                    1491.0,
+                    511.0,
+                    1491.0,
+                    511.0,
+                    1526.0,
+                    398.0,
+                    1526.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    400.0,
+                    1540.0,
+                    547.0,
+                    1540.0,
+                    547.0,
+                    1565.0,
+                    400.0,
+                    1565.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    396.0,
+                    1583.0,
+                    565.0,
+                    1583.0,
+                    565.0,
+                    1607.0,
+                    396.0,
+                    1607.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    397.0,
+                    1623.0,
+                    532.0,
+                    1623.0,
+                    532.0,
+                    1653.0,
+                    397.0,
+                    1653.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    397.0,
+                    1666.0,
+                    494.0,
+                    1666.0,
+                    494.0,
+                    1697.0,
+                    397.0,
+                    1697.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    395.0,
+                    1778.0,
+                    874.0,
+                    1778.0,
+                    874.0,
+                    1815.0,
+                    395.0,
+                    1815.0
+                ],
+                "score": 1.0,
+                "text": ""
+            }
+        ],
+        "page_info": {
+            "page_no": 4,
+            "height": 2200,
+            "width": 1700
+        }
+    },
+    {
+        "layout_dets": [
+            {
+                "category_id": 5,
+                "poly": [
+                    297,
+                    1005,
+                    1582,
+                    1005,
+                    1582,
+                    1756,
+                    297,
+                    1756
+                ],
+                "score": 0.985,
+                "html": "<html><body><table><tr><td>Property</td><td>Meaning</td><td>Type and Range</td><td>Example Notes</td><td>Platforms</td></tr><tr><td>config</td><td>Absolutepathnameof configuration file required by nvds_msgapi_* interface</td><td>String</td><td>config=msgapi_ config.txt</td><td>dGPU Jetson</td></tr><tr><td>conn-str</td><td>Connection string as end point for communication with server</td><td>String Format must be <name>;<port>; <topic-name></td><td>conn-str=foo.bar.com;80 or conn-str=foo.bar.com; 80;dsapp1</td><td>dGPU Jetson</td></tr><tr><td>proto-lib</td><td>Absolutepathnameoflibrary that contains the protocol adapter as an implementation of nvds_msgapi_*</td><td>String</td><td>proto-lib=libnvds_ kafka_proto.so</td><td>dGPU Jetson</td></tr><tr><td>comp-id</td><td>ID of component from which metadata should beprocessed</td><td>Integer, 0 to 4,294,967,295</td><td>comp-id=3 Default:plugin processesmetadata from any component</td><td>dGPU Jetson</td></tr><tr><td>topic</td><td>Message topic name</td><td>String</td><td>topic=dsapp1</td><td>dGPU Jetson</td></tr></table></body></html>"
+            },
+            {
+                "category_id": 5,
+                "poly": [
+                    299,
+                    261,
+                    1501,
+                    261,
+                    1501,
+                    735,
+                    299,
+                    735
+                ],
+                "score": 0.985,
+                "html": "<html><body><table><tr><td>Feature</td><td>Description</td><td>Release</td></tr><tr><td>Payload in JSONformat</td><td>Accepts message payload in JSON format</td><td>DS 3.0</td></tr><tr><td>Kafka protocol support</td><td>Kafka protocol adapter implementation</td><td>DS 3.0</td></tr><tr><td>Azure IOT support</td><td>IntegrationwithAzureIOTframework</td><td>DS 4.0</td></tr><tr><td>AMQP support</td><td>AMQP0-9-1protocoladapter implementation</td><td>DS 4.0</td></tr><tr><td>Custom protocol support</td><td>Provision to support custom protocol through a custom implementation of the adapterinterface</td><td>DS 3.0</td></tr><tr><td>Configurableparameters</td><td>Protocol specific options through configuration file</td><td>DS 3.0</td></tr></table></body></html>"
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    298,
+                    1901,
+                    1503,
+                    1901,
+                    1503,
+                    1983,
+                    298,
+                    1983
+                ],
+                "score": 0.971
+            },
+            {
+                "category_id": 0,
+                "poly": [
+                    300,
+                    1820,
+                    1366,
+                    1820,
+                    1366,
+                    1875,
+                    300,
+                    1875
+                ],
+                "score": 0.947
+            },
+            {
+                "category_id": 0,
+                "poly": [
+                    297,
+                    800,
+                    806,
+                    800,
+                    806,
+                    854,
+                    297,
+                    854
+                ],
+                "score": 0.946
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    299,
+                    873,
+                    1268,
+                    873,
+                    1268,
+                    913,
+                    299,
+                    913
+                ],
+                "score": 0.925
+            },
+            {
+                "category_id": 2,
+                "poly": [
+                    297,
+                    2103,
+                    605,
+                    2103,
+                    605,
+                    2131,
+                    297,
+                    2131
+                ],
+                "score": 0.908
+            },
+            {
+                "category_id": 6,
+                "poly": [
+                    295,
+                    199,
+                    1046,
+                    199,
+                    1046,
+                    241,
+                    295,
+                    241
+                ],
+                "score": 0.905
+            },
+            {
+                "category_id": 2,
+                "poly": [
+                    1148,
+                    2102,
+                    1502,
+                    2102,
+                    1502,
+                    2131,
+                    1148,
+                    2131
+                ],
+                "score": 0.902
+            },
+            {
+                "category_id": 6,
+                "poly": [
+                    297,
+                    943,
+                    1043,
+                    943,
+                    1043,
+                    986,
+                    297,
+                    986
+                ],
+                "score": 0.644
+            },
+            {
+                "category_id": 0,
+                "poly": [
+                    297,
+                    943,
+                    1043,
+                    943,
+                    1043,
+                    986,
+                    297,
+                    986
+                ],
+                "score": 0.136
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    297,
+                    943,
+                    1043,
+                    943,
+                    1043,
+                    986,
+                    297,
+                    986
+                ],
+                "score": 0.128
+            },
+            {
+                "category_id": 13,
+                "poly": [
+                    1225,
+                    1417,
+                    1243,
+                    1417,
+                    1243,
+                    1437,
+                    1225,
+                    1437
+                ],
+                "score": 0.5,
+                "latex": "|=|"
+            },
+            {
+                "category_id": 13,
+                "poly": [
+                    1183,
+                    1703,
+                    1199,
+                    1703,
+                    1199,
+                    1722,
+                    1183,
+                    1722
+                ],
+                "score": 0.41,
+                "latex": ":="
+            },
+            {
+                "category_id": 13,
+                "poly": [
+                    1219,
+                    1228,
+                    1234,
+                    1228,
+                    1234,
+                    1245,
+                    1219,
+                    1245
+                ],
+                "score": 0.33,
+                "latex": "\\fallingdotseq"
+            },
+            {
+                "category_id": 13,
+                "poly": [
+                    1219,
+                    1305,
+                    1234,
+                    1305,
+                    1234,
+                    1323,
+                    1219,
+                    1323
+                ],
+                "score": 0.27,
+                "latex": "\\fallingdotseq"
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1901.0,
+                    1505.0,
+                    1901.0,
+                    1505.0,
+                    1945.0,
+                    297.0,
+                    1945.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    294.0,
+                    1945.0,
+                    1492.0,
+                    1945.0,
+                    1492.0,
+                    1983.0,
+                    294.0,
+                    1983.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    295.0,
+                    1822.0,
+                    441.0,
+                    1822.0,
+                    441.0,
+                    1869.0,
+                    295.0,
+                    1869.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    501.0,
+                    1828.0,
+                    1365.0,
+                    1828.0,
+                    1365.0,
+                    1871.0,
+                    501.0,
+                    1871.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    295.0,
+                    803.0,
+                    437.0,
+                    803.0,
+                    437.0,
+                    850.0,
+                    295.0,
+                    850.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    500.0,
+                    806.0,
+                    803.0,
+                    806.0,
+                    803.0,
+                    852.0,
+                    500.0,
+                    852.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    295.0,
+                    873.0,
+                    1269.0,
+                    873.0,
+                    1269.0,
+                    914.0,
+                    295.0,
+                    914.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    300.0,
+                    2106.0,
+                    606.0,
+                    2106.0,
+                    606.0,
+                    2131.0,
+                    300.0,
+                    2131.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    200.0,
+                    1043.0,
+                    200.0,
+                    1043.0,
+                    239.0,
+                    297.0,
+                    239.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    1149.0,
+                    2103.0,
+                    1501.0,
+                    2103.0,
+                    1501.0,
+                    2131.0,
+                    1149.0,
+                    2131.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    945.0,
+                    1041.0,
+                    945.0,
+                    1041.0,
+                    986.0,
+                    297.0,
+                    986.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    945.0,
+                    1041.0,
+                    945.0,
+                    1041.0,
+                    986.0,
+                    297.0,
+                    986.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    945.0,
+                    1041.0,
+                    945.0,
+                    1041.0,
+                    986.0,
+                    297.0,
+                    986.0
+                ],
+                "score": 1.0,
+                "text": ""
+            }
+        ],
+        "page_info": {
+            "page_no": 5,
+            "height": 2200,
+            "width": 1700
+        }
+    },
+    {
+        "layout_dets": [
+            {
+                "category_id": 1,
+                "poly": [
+                    298,
+                    1266,
+                    1392,
+                    1266,
+                    1392,
+                    1390,
+                    298,
+                    1390
+                ],
+                "score": 0.971
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    296,
+                    1747,
+                    1479,
+                    1747,
+                    1479,
+                    1868,
+                    296,
+                    1868
+                ],
+                "score": 0.971
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    296,
+                    936,
+                    1494,
+                    936,
+                    1494,
+                    1017,
+                    296,
+                    1017
+                ],
+                "score": 0.97
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    300,
+                    1037,
+                    1469,
+                    1037,
+                    1469,
+                    1241,
+                    300,
+                    1241
+                ],
+                "score": 0.97
+            },
+            {
+                "category_id": 3,
+                "poly": [
+                    304,
+                    302,
+                    1490,
+                    302,
+                    1490,
+                    840,
+                    304,
+                    840
+                ],
+                "score": 0.949
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    297,
+                    1582,
+                    1338,
+                    1582,
+                    1338,
+                    1684,
+                    297,
+                    1684
+                ],
+                "score": 0.946
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    294,
+                    203,
+                    1474,
+                    203,
+                    1474,
+                    283,
+                    294,
+                    283
+                ],
+                "score": 0.941
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    295,
+                    1415,
+                    1445,
+                    1415,
+                    1445,
+                    1456,
+                    295,
+                    1456
+                ],
+                "score": 0.917
+            },
+            {
+                "category_id": 2,
+                "poly": [
+                    297,
+                    2103,
+                    605,
+                    2103,
+                    605,
+                    2131,
+                    297,
+                    2131
+                ],
+                "score": 0.915
+            },
+            {
+                "category_id": 2,
+                "poly": [
+                    1148,
+                    2102,
+                    1502,
+                    2102,
+                    1502,
+                    2131,
+                    1148,
+                    2131
+                ],
+                "score": 0.908
+            },
+            {
+                "category_id": 0,
+                "poly": [
+                    300,
+                    1487,
+                    1291,
+                    1487,
+                    1291,
+                    1536,
+                    300,
+                    1536
+                ],
+                "score": 0.812
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    294,
+                    868,
+                    1396,
+                    868,
+                    1396,
+                    912,
+                    294,
+                    912
+                ],
+                "score": 0.536
+            },
+            {
+                "category_id": 4,
+                "poly": [
+                    294,
+                    868,
+                    1396,
+                    868,
+                    1396,
+                    912,
+                    294,
+                    912
+                ],
+                "score": 0.471
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    300,
+                    1487,
+                    1291,
+                    1487,
+                    1291,
+                    1536,
+                    300,
+                    1536
+                ],
+                "score": 0.121
+            },
+            {
+                "category_id": 13,
+                "poly": [
+                    1167,
+                    1352,
+                    1225,
+                    1352,
+                    1225,
+                    1384,
+                    1167,
+                    1384
+                ],
+                "score": 0.8,
+                "latex": "\\subset++"
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    298.0,
+                    1270.0,
+                    1064.0,
+                    1270.0,
+                    1064.0,
+                    1302.0,
+                    298.0,
+                    1302.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    299.0,
+                    1313.0,
+                    1388.0,
+                    1313.0,
+                    1388.0,
+                    1343.0,
+                    299.0,
+                    1343.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    298.0,
+                    1355.0,
+                    1166.0,
+                    1355.0,
+                    1166.0,
+                    1385.0,
+                    298.0,
+                    1385.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    1226.0,
+                    1355.0,
+                    1232.0,
+                    1355.0,
+                    1232.0,
+                    1385.0,
+                    1226.0,
+                    1385.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1748.0,
+                    1411.0,
+                    1748.0,
+                    1411.0,
+                    1785.0,
+                    297.0,
+                    1785.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    298.0,
+                    1791.0,
+                    1474.0,
+                    1791.0,
+                    1474.0,
+                    1825.0,
+                    298.0,
+                    1825.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    295.0,
+                    1831.0,
+                    1033.0,
+                    1831.0,
+                    1033.0,
+                    1864.0,
+                    295.0,
+                    1864.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    296.0,
+                    937.0,
+                    1493.0,
+                    937.0,
+                    1493.0,
+                    978.0,
+                    296.0,
+                    978.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    981.0,
+                    779.0,
+                    981.0,
+                    779.0,
+                    1019.0,
+                    297.0,
+                    1019.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    346.0,
+                    1039.0,
+                    651.0,
+                    1039.0,
+                    651.0,
+                    1077.0,
+                    346.0,
+                    1077.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    344.0,
+                    1077.0,
+                    1154.0,
+                    1077.0,
+                    1154.0,
+                    1121.0,
+                    344.0,
+                    1121.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    346.0,
+                    1121.0,
+                    730.0,
+                    1121.0,
+                    730.0,
+                    1159.0,
+                    346.0,
+                    1159.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    344.0,
+                    1161.0,
+                    1467.0,
+                    1161.0,
+                    1467.0,
+                    1203.0,
+                    344.0,
+                    1203.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    343.0,
+                    1200.0,
+                    985.0,
+                    1200.0,
+                    985.0,
+                    1244.0,
+                    343.0,
+                    1244.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    296.0,
+                    1584.0,
+                    1263.0,
+                    1584.0,
+                    1263.0,
+                    1617.0,
+                    296.0,
+                    1617.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    430.0,
+                    1620.0,
+                    1333.0,
+                    1620.0,
+                    1333.0,
+                    1648.0,
+                    430.0,
+                    1648.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    296.0,
+                    1656.0,
+                    333.0,
+                    1656.0,
+                    333.0,
+                    1684.0,
+                    296.0,
+                    1684.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    299.0,
+                    205.0,
+                    1469.0,
+                    205.0,
+                    1469.0,
+                    244.0,
+                    299.0,
+                    244.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    247.0,
+                    1284.0,
+                    247.0,
+                    1284.0,
+                    284.0,
+                    297.0,
+                    284.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    298.0,
+                    1418.0,
+                    1444.0,
+                    1418.0,
+                    1444.0,
+                    1455.0,
+                    298.0,
+                    1455.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    300.0,
+                    2106.0,
+                    606.0,
+                    2106.0,
+                    606.0,
+                    2131.0,
+                    300.0,
+                    2131.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    1149.0,
+                    2103.0,
+                    1501.0,
+                    2103.0,
+                    1501.0,
+                    2131.0,
+                    1149.0,
+                    2131.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    298.0,
+                    1491.0,
+                    445.0,
+                    1491.0,
+                    445.0,
+                    1529.0,
+                    298.0,
+                    1529.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    499.0,
+                    1492.0,
+                    1290.0,
+                    1492.0,
+                    1290.0,
+                    1531.0,
+                    499.0,
+                    1531.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    299.0,
+                    872.0,
+                    1393.0,
+                    872.0,
+                    1393.0,
+                    909.0,
+                    299.0,
+                    909.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    299.0,
+                    872.0,
+                    1393.0,
+                    872.0,
+                    1393.0,
+                    909.0,
+                    299.0,
+                    909.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    298.0,
+                    1491.0,
+                    445.0,
+                    1491.0,
+                    445.0,
+                    1529.0,
+                    298.0,
+                    1529.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    499.0,
+                    1492.0,
+                    1290.0,
+                    1492.0,
+                    1290.0,
+                    1531.0,
+                    499.0,
+                    1531.0
+                ],
+                "score": 1.0,
+                "text": ""
+            }
+        ],
+        "page_info": {
+            "page_no": 6,
+            "height": 2200,
+            "width": 1700
+        }
+    },
+    {
+        "layout_dets": [
+            {
+                "category_id": 1,
+                "poly": [
+                    298,
+                    1844,
+                    1459,
+                    1844,
+                    1459,
+                    1965,
+                    298,
+                    1965
+                ],
+                "score": 0.965
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    297,
+                    1694,
+                    1459,
+                    1694,
+                    1459,
+                    1818,
+                    297,
+                    1818
+                ],
+                "score": 0.963
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    348,
+                    544,
+                    1481,
+                    544,
+                    1481,
+                    665,
+                    348,
+                    665
+                ],
+                "score": 0.96
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    347,
+                    684,
+                    1476,
+                    684,
+                    1476,
+                    805,
+                    347,
+                    805
+                ],
+                "score": 0.959
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    295,
+                    1588,
+                    1465,
+                    1588,
+                    1465,
+                    1669,
+                    295,
+                    1669
+                ],
+                "score": 0.94
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    310,
+                    256,
+                    1416,
+                    256,
+                    1416,
+                    334,
+                    310,
+                    334
+                ],
+                "score": 0.936
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    295,
+                    1042,
+                    1373,
+                    1042,
+                    1373,
+                    1081,
+                    295,
+                    1081
+                ],
+                "score": 0.919
+            },
+            {
+                "category_id": 0,
+                "poly": [
+                    298,
+                    977,
+                    489,
+                    977,
+                    489,
+                    1016,
+                    298,
+                    1016
+                ],
+                "score": 0.915
+            },
+            {
+                "category_id": 2,
+                "poly": [
+                    297,
+                    2103,
+                    605,
+                    2103,
+                    605,
+                    2131,
+                    297,
+                    2131
+                ],
+                "score": 0.911
+            },
+            {
+                "category_id": 0,
+                "poly": [
+                    298,
+                    200,
+                    466,
+                    200,
+                    466,
+                    236,
+                    298,
+                    236
+                ],
+                "score": 0.906
+            },
+            {
+                "category_id": 2,
+                "poly": [
+                    1148,
+                    2102,
+                    1503,
+                    2102,
+                    1503,
+                    2131,
+                    1148,
+                    2131
+                ],
+                "score": 0.9
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    348,
+                    353,
+                    1479,
+                    353,
+                    1479,
+                    526,
+                    348,
+                    526
+                ],
+                "score": 0.832
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    301,
+                    1113,
+                    1416,
+                    1113,
+                    1416,
+                    1205,
+                    301,
+                    1205
+                ],
+                "score": 0.811
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    314,
+                    825,
+                    1458,
+                    825,
+                    1458,
+                    948,
+                    314,
+                    948
+                ],
+                "score": 0.693
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    294,
+                    1251,
+                    1402,
+                    1251,
+                    1402,
+                    1531,
+                    294,
+                    1531
+                ],
+                "score": 0.349
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    301,
+                    1253,
+                    1324,
+                    1253,
+                    1324,
+                    1357,
+                    301,
+                    1357
+                ],
+                "score": 0.316
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    322,
+                    867,
+                    1467,
+                    867,
+                    1467,
+                    947,
+                    322,
+                    947
+                ],
+                "score": 0.305
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    324,
+                    825,
+                    1339,
+                    825,
+                    1339,
+                    862,
+                    324,
+                    862
+                ],
+                "score": 0.268
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    358,
+                    405,
+                    1481,
+                    405,
+                    1481,
+                    526,
+                    358,
+                    526
+                ],
+                "score": 0.155
+            },
+            {
+                "category_id": 0,
+                "poly": [
+                    301,
+                    1113,
+                    1416,
+                    1113,
+                    1416,
+                    1205,
+                    301,
+                    1205
+                ],
+                "score": 0.135
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    297,
+                    1390,
+                    1402,
+                    1390,
+                    1402,
+                    1528,
+                    297,
+                    1528
+                ],
+                "score": 0.129
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    366,
+                    354,
+                    1348,
+                    354,
+                    1348,
+                    393,
+                    366,
+                    393
+                ],
+                "score": 0.125
+            },
+            {
+                "category_id": 13,
+                "poly": [
+                    582,
+                    412,
+                    604,
+                    412,
+                    604,
+                    436,
+                    582,
+                    436
+                ],
+                "score": 0.34,
+                "latex": ">"
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    295.0,
+                    1844.0,
+                    1458.0,
+                    1844.0,
+                    1458.0,
+                    1887.0,
+                    295.0,
+                    1887.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    295.0,
+                    1889.0,
+                    1430.0,
+                    1889.0,
+                    1430.0,
+                    1925.0,
+                    295.0,
+                    1925.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1932.0,
+                    424.0,
+                    1932.0,
+                    424.0,
+                    1964.0,
+                    297.0,
+                    1964.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    300.0,
+                    1701.0,
+                    1403.0,
+                    1701.0,
+                    1403.0,
+                    1732.0,
+                    300.0,
+                    1732.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1741.0,
+                    1454.0,
+                    1741.0,
+                    1454.0,
+                    1776.0,
+                    297.0,
+                    1776.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    298.0,
+                    1783.0,
+                    619.0,
+                    1783.0,
+                    619.0,
+                    1819.0,
+                    298.0,
+                    1819.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    346.0,
+                    542.0,
+                    1482.0,
+                    542.0,
+                    1482.0,
+                    587.0,
+                    346.0,
+                    587.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    347.0,
+                    588.0,
+                    1379.0,
+                    588.0,
+                    1379.0,
+                    627.0,
+                    347.0,
+                    627.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    348.0,
+                    629.0,
+                    777.0,
+                    629.0,
+                    777.0,
+                    663.0,
+                    348.0,
+                    663.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    349.0,
+                    689.0,
+                    1472.0,
+                    689.0,
+                    1472.0,
+                    724.0,
+                    349.0,
+                    724.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    348.0,
+                    731.0,
+                    1457.0,
+                    731.0,
+                    1457.0,
+                    765.0,
+                    348.0,
+                    765.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    347.0,
+                    769.0,
+                    1271.0,
+                    769.0,
+                    1271.0,
+                    808.0,
+                    347.0,
+                    808.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1589.0,
+                    1463.0,
+                    1589.0,
+                    1463.0,
+                    1631.0,
+                    297.0,
+                    1631.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1633.0,
+                    626.0,
+                    1633.0,
+                    626.0,
+                    1672.0,
+                    297.0,
+                    1672.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    343.0,
+                    259.0,
+                    1406.0,
+                    259.0,
+                    1406.0,
+                    292.0,
+                    343.0,
+                    292.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    347.0,
+                    299.0,
+                    1043.0,
+                    299.0,
+                    1043.0,
+                    337.0,
+                    347.0,
+                    337.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    299.0,
+                    1046.0,
+                    1370.0,
+                    1046.0,
+                    1370.0,
+                    1080.0,
+                    299.0,
+                    1080.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    300.0,
+                    983.0,
+                    486.0,
+                    983.0,
+                    486.0,
+                    1012.0,
+                    300.0,
+                    1012.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    300.0,
+                    2106.0,
+                    606.0,
+                    2106.0,
+                    606.0,
+                    2131.0,
+                    300.0,
+                    2131.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    298.0,
+                    203.0,
+                    467.0,
+                    203.0,
+                    467.0,
+                    234.0,
+                    298.0,
+                    234.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    1150.0,
+                    2104.0,
+                    1501.0,
+                    2104.0,
+                    1501.0,
+                    2129.0,
+                    1150.0,
+                    2129.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    397.0,
+                    357.0,
+                    1338.0,
+                    357.0,
+                    1338.0,
+                    394.0,
+                    397.0,
+                    394.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    399.0,
+                    408.0,
+                    581.0,
+                    408.0,
+                    581.0,
+                    442.0,
+                    399.0,
+                    442.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    605.0,
+                    408.0,
+                    1462.0,
+                    408.0,
+                    1462.0,
+                    442.0,
+                    605.0,
+                    442.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    399.0,
+                    450.0,
+                    1471.0,
+                    450.0,
+                    1471.0,
+                    485.0,
+                    399.0,
+                    485.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    397.0,
+                    489.0,
+                    1039.0,
+                    489.0,
+                    1039.0,
+                    525.0,
+                    397.0,
+                    525.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1117.0,
+                    450.0,
+                    1117.0,
+                    450.0,
+                    1155.0,
+                    297.0,
+                    1155.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    497.0,
+                    1117.0,
+                    1414.0,
+                    1117.0,
+                    1414.0,
+                    1160.0,
+                    497.0,
+                    1160.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    419.0,
+                    1166.0,
+                    670.0,
+                    1166.0,
+                    670.0,
+                    1201.0,
+                    419.0,
+                    1201.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    318.0,
+                    831.0,
+                    1333.0,
+                    831.0,
+                    1333.0,
+                    861.0,
+                    318.0,
+                    861.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    311.0,
+                    868.0,
+                    1454.0,
+                    868.0,
+                    1454.0,
+                    906.0,
+                    311.0,
+                    906.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    347.0,
+                    910.0,
+                    629.0,
+                    910.0,
+                    629.0,
+                    949.0,
+                    347.0,
+                    949.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    296.0,
+                    1254.0,
+                    1314.0,
+                    1254.0,
+                    1314.0,
+                    1289.0,
+                    296.0,
+                    1289.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    430.0,
+                    1291.0,
+                    1137.0,
+                    1291.0,
+                    1137.0,
+                    1324.0,
+                    430.0,
+                    1324.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    298.0,
+                    1329.0,
+                    330.0,
+                    1329.0,
+                    330.0,
+                    1354.0,
+                    298.0,
+                    1354.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1395.0,
+                    1393.0,
+                    1395.0,
+                    1393.0,
+                    1424.0,
+                    297.0,
+                    1424.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    431.0,
+                    1429.0,
+                    1246.0,
+                    1429.0,
+                    1246.0,
+                    1458.0,
+                    431.0,
+                    1458.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    431.0,
+                    1464.0,
+                    1285.0,
+                    1464.0,
+                    1285.0,
+                    1493.0,
+                    431.0,
+                    1493.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    296.0,
+                    1498.0,
+                    332.0,
+                    1498.0,
+                    332.0,
+                    1528.0,
+                    296.0,
+                    1528.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    299.0,
+                    1257.0,
+                    1313.0,
+                    1257.0,
+                    1313.0,
+                    1288.0,
+                    299.0,
+                    1288.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    432.0,
+                    1292.0,
+                    1135.0,
+                    1292.0,
+                    1135.0,
+                    1320.0,
+                    432.0,
+                    1320.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    295.0,
+                    1325.0,
+                    334.0,
+                    1325.0,
+                    334.0,
+                    1359.0,
+                    295.0,
+                    1359.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    347.0,
+                    869.0,
+                    1455.0,
+                    869.0,
+                    1455.0,
+                    906.0,
+                    347.0,
+                    906.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    349.0,
+                    910.0,
+                    629.0,
+                    910.0,
+                    629.0,
+                    949.0,
+                    349.0,
+                    949.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    349.0,
+                    830.0,
+                    1336.0,
+                    830.0,
+                    1336.0,
+                    860.0,
+                    349.0,
+                    860.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    398.0,
+                    409.0,
+                    581.0,
+                    409.0,
+                    581.0,
+                    443.0,
+                    398.0,
+                    443.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    605.0,
+                    409.0,
+                    1461.0,
+                    409.0,
+                    1461.0,
+                    443.0,
+                    605.0,
+                    443.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    397.0,
+                    449.0,
+                    1471.0,
+                    449.0,
+                    1471.0,
+                    488.0,
+                    397.0,
+                    488.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    397.0,
+                    489.0,
+                    1038.0,
+                    489.0,
+                    1038.0,
+                    526.0,
+                    397.0,
+                    526.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1117.0,
+                    450.0,
+                    1117.0,
+                    450.0,
+                    1155.0,
+                    297.0,
+                    1155.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    497.0,
+                    1117.0,
+                    1414.0,
+                    1117.0,
+                    1414.0,
+                    1160.0,
+                    497.0,
+                    1160.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    419.0,
+                    1166.0,
+                    670.0,
+                    1166.0,
+                    670.0,
+                    1201.0,
+                    419.0,
+                    1201.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1395.0,
+                    1394.0,
+                    1395.0,
+                    1394.0,
+                    1426.0,
+                    297.0,
+                    1426.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    432.0,
+                    1428.0,
+                    1246.0,
+                    1428.0,
+                    1246.0,
+                    1458.0,
+                    432.0,
+                    1458.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    432.0,
+                    1464.0,
+                    1284.0,
+                    1464.0,
+                    1284.0,
+                    1491.0,
+                    432.0,
+                    1491.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1493.0,
+                    336.0,
+                    1493.0,
+                    336.0,
+                    1530.0,
+                    297.0,
+                    1530.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    401.0,
+                    356.0,
+                    1338.0,
+                    356.0,
+                    1338.0,
+                    393.0,
+                    401.0,
+                    393.0
+                ],
+                "score": 1.0,
+                "text": ""
+            }
+        ],
+        "page_info": {
+            "page_no": 7,
+            "height": 2200,
+            "width": 1700
+        }
+    },
+    {
+        "layout_dets": [
+            {
+                "category_id": 1,
+                "poly": [
+                    296,
+                    1323,
+                    1499,
+                    1323,
+                    1499,
+                    1612,
+                    296,
+                    1612
+                ],
+                "score": 0.977
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    297,
+                    1637,
+                    1489,
+                    1637,
+                    1489,
+                    1843,
+                    297,
+                    1843
+                ],
+                "score": 0.971
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    300,
+                    1869,
+                    1380,
+                    1869,
+                    1380,
+                    1949,
+                    300,
+                    1949
+                ],
+                "score": 0.955
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    347,
+                    845,
+                    1488,
+                    845,
+                    1488,
+                    1057,
+                    347,
+                    1057
+                ],
+                "score": 0.934
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    351,
+                    787,
+                    847,
+                    787,
+                    847,
+                    826,
+                    351,
+                    826
+                ],
+                "score": 0.918
+            },
+            {
+                "category_id": 2,
+                "poly": [
+                    298,
+                    2103,
+                    605,
+                    2103,
+                    605,
+                    2131,
+                    298,
+                    2131
+                ],
+                "score": 0.907
+            },
+            {
+                "category_id": 0,
+                "poly": [
+                    302,
+                    1091,
+                    1390,
+                    1091,
+                    1390,
+                    1181,
+                    302,
+                    1181
+                ],
+                "score": 0.907
+            },
+            {
+                "category_id": 2,
+                "poly": [
+                    1148,
+                    2102,
+                    1503,
+                    2102,
+                    1503,
+                    2130,
+                    1148,
+                    2130
+                ],
+                "score": 0.904
+            },
+            {
+                "category_id": 0,
+                "poly": [
+                    297,
+                    200,
+                    466,
+                    200,
+                    466,
+                    237,
+                    297,
+                    237
+                ],
+                "score": 0.901
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    302,
+                    1230,
+                    746,
+                    1230,
+                    746,
+                    1263,
+                    302,
+                    1263
+                ],
+                "score": 0.885
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    302,
+                    254,
+                    1491,
+                    254,
+                    1491,
+                    583,
+                    302,
+                    583
+                ],
+                "score": 0.804
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    347,
+                    632,
+                    1232,
+                    632,
+                    1232,
+                    733,
+                    347,
+                    733
+                ],
+                "score": 0.539
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    306,
+                    254,
+                    1489,
+                    254,
+                    1489,
+                    758,
+                    306,
+                    758
+                ],
+                "score": 0.109
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    296.0,
+                    1326.0,
+                    1496.0,
+                    1326.0,
+                    1496.0,
+                    1366.0,
+                    296.0,
+                    1366.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    298.0,
+                    1370.0,
+                    1469.0,
+                    1370.0,
+                    1469.0,
+                    1404.0,
+                    298.0,
+                    1404.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    296.0,
+                    1411.0,
+                    1379.0,
+                    1411.0,
+                    1379.0,
+                    1446.0,
+                    296.0,
+                    1446.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    295.0,
+                    1449.0,
+                    1485.0,
+                    1449.0,
+                    1485.0,
+                    1488.0,
+                    295.0,
+                    1488.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    295.0,
+                    1490.0,
+                    1454.0,
+                    1490.0,
+                    1454.0,
+                    1532.0,
+                    295.0,
+                    1532.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    295.0,
+                    1532.0,
+                    1326.0,
+                    1532.0,
+                    1326.0,
+                    1572.0,
+                    295.0,
+                    1572.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    296.0,
+                    1576.0,
+                    1028.0,
+                    1576.0,
+                    1028.0,
+                    1613.0,
+                    296.0,
+                    1613.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    298.0,
+                    1642.0,
+                    1407.0,
+                    1642.0,
+                    1407.0,
+                    1676.0,
+                    298.0,
+                    1676.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1683.0,
+                    1417.0,
+                    1683.0,
+                    1417.0,
+                    1720.0,
+                    297.0,
+                    1720.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    295.0,
+                    1724.0,
+                    1418.0,
+                    1724.0,
+                    1418.0,
+                    1760.0,
+                    295.0,
+                    1760.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1765.0,
+                    1485.0,
+                    1765.0,
+                    1485.0,
+                    1803.0,
+                    297.0,
+                    1803.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    294.0,
+                    1801.0,
+                    1220.0,
+                    1801.0,
+                    1220.0,
+                    1848.0,
+                    294.0,
+                    1848.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1872.0,
+                    1383.0,
+                    1872.0,
+                    1383.0,
+                    1907.0,
+                    297.0,
+                    1907.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    298.0,
+                    1916.0,
+                    978.0,
+                    1916.0,
+                    978.0,
+                    1945.0,
+                    298.0,
+                    1945.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    395.0,
+                    850.0,
+                    1467.0,
+                    850.0,
+                    1467.0,
+                    884.0,
+                    395.0,
+                    884.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    397.0,
+                    890.0,
+                    1485.0,
+                    890.0,
+                    1485.0,
+                    924.0,
+                    397.0,
+                    924.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    395.0,
+                    928.0,
+                    1026.0,
+                    928.0,
+                    1026.0,
+                    968.0,
+                    395.0,
+                    968.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    397.0,
+                    981.0,
+                    1477.0,
+                    981.0,
+                    1477.0,
+                    1016.0,
+                    397.0,
+                    1016.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    396.0,
+                    1020.0,
+                    614.0,
+                    1020.0,
+                    614.0,
+                    1058.0,
+                    396.0,
+                    1058.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    349.0,
+                    789.0,
+                    848.0,
+                    789.0,
+                    848.0,
+                    824.0,
+                    349.0,
+                    824.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    300.0,
+                    2106.0,
+                    606.0,
+                    2106.0,
+                    606.0,
+                    2131.0,
+                    300.0,
+                    2131.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1093.0,
+                    449.0,
+                    1093.0,
+                    449.0,
+                    1132.0,
+                    297.0,
+                    1132.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    498.0,
+                    1094.0,
+                    1383.0,
+                    1094.0,
+                    1383.0,
+                    1135.0,
+                    498.0,
+                    1135.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    417.0,
+                    1137.0,
+                    664.0,
+                    1137.0,
+                    664.0,
+                    1182.0,
+                    417.0,
+                    1182.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    1150.0,
+                    2105.0,
+                    1501.0,
+                    2105.0,
+                    1501.0,
+                    2130.0,
+                    1150.0,
+                    2130.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    298.0,
+                    200.0,
+                    467.0,
+                    200.0,
+                    467.0,
+                    238.0,
+                    298.0,
+                    238.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    298.0,
+                    1230.0,
+                    747.0,
+                    1230.0,
+                    747.0,
+                    1262.0,
+                    298.0,
+                    1262.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    338.0,
+                    258.0,
+                    1486.0,
+                    258.0,
+                    1486.0,
+                    294.0,
+                    338.0,
+                    294.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    343.0,
+                    299.0,
+                    1442.0,
+                    299.0,
+                    1442.0,
+                    338.0,
+                    343.0,
+                    338.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    350.0,
+                    343.0,
+                    1220.0,
+                    343.0,
+                    1220.0,
+                    377.0,
+                    350.0,
+                    377.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    343.0,
+                    380.0,
+                    1369.0,
+                    380.0,
+                    1369.0,
+                    423.0,
+                    343.0,
+                    423.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    349.0,
+                    427.0,
+                    796.0,
+                    427.0,
+                    796.0,
+                    456.0,
+                    349.0,
+                    456.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    343.0,
+                    464.0,
+                    1456.0,
+                    464.0,
+                    1456.0,
+                    502.0,
+                    343.0,
+                    502.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    347.0,
+                    506.0,
+                    1471.0,
+                    506.0,
+                    1471.0,
+                    543.0,
+                    347.0,
+                    543.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    347.0,
+                    549.0,
+                    969.0,
+                    549.0,
+                    969.0,
+                    582.0,
+                    347.0,
+                    582.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    349.0,
+                    635.0,
+                    1229.0,
+                    635.0,
+                    1229.0,
+                    665.0,
+                    349.0,
+                    665.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    478.0,
+                    668.0,
+                    1069.0,
+                    668.0,
+                    1069.0,
+                    699.0,
+                    478.0,
+                    699.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    344.0,
+                    702.0,
+                    384.0,
+                    702.0,
+                    384.0,
+                    736.0,
+                    344.0,
+                    736.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    342.0,
+                    258.0,
+                    1486.0,
+                    258.0,
+                    1486.0,
+                    293.0,
+                    342.0,
+                    293.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    346.0,
+                    300.0,
+                    1441.0,
+                    300.0,
+                    1441.0,
+                    336.0,
+                    346.0,
+                    336.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    350.0,
+                    343.0,
+                    1220.0,
+                    343.0,
+                    1220.0,
+                    377.0,
+                    350.0,
+                    377.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    344.0,
+                    379.0,
+                    1369.0,
+                    379.0,
+                    1369.0,
+                    421.0,
+                    344.0,
+                    421.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    348.0,
+                    424.0,
+                    797.0,
+                    424.0,
+                    797.0,
+                    457.0,
+                    348.0,
+                    457.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    344.0,
+                    466.0,
+                    1455.0,
+                    466.0,
+                    1455.0,
+                    499.0,
+                    344.0,
+                    499.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    348.0,
+                    507.0,
+                    1470.0,
+                    507.0,
+                    1470.0,
+                    541.0,
+                    348.0,
+                    541.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    348.0,
+                    549.0,
+                    968.0,
+                    549.0,
+                    968.0,
+                    581.0,
+                    348.0,
+                    581.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    348.0,
+                    635.0,
+                    1228.0,
+                    635.0,
+                    1228.0,
+                    665.0,
+                    348.0,
+                    665.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    479.0,
+                    668.0,
+                    1070.0,
+                    668.0,
+                    1070.0,
+                    700.0,
+                    479.0,
+                    700.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    346.0,
+                    703.0,
+                    384.0,
+                    703.0,
+                    384.0,
+                    735.0,
+                    346.0,
+                    735.0
+                ],
+                "score": 1.0,
+                "text": ""
+            }
+        ],
+        "page_info": {
+            "page_no": 8,
+            "height": 2200,
+            "width": 1700
+        }
+    },
+    {
+        "layout_dets": [
+            {
+                "category_id": 1,
+                "poly": [
+                    296,
+                    815,
+                    1482,
+                    815,
+                    1482,
+                    1065,
+                    296,
+                    1065
+                ],
+                "score": 0.975
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    297,
+                    1212,
+                    1477,
+                    1212,
+                    1477,
+                    1334,
+                    297,
+                    1334
+                ],
+                "score": 0.975
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    296,
+                    1633,
+                    1456,
+                    1633,
+                    1456,
+                    1906,
+                    296,
+                    1906
+                ],
+                "score": 0.966
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    298,
+                    389,
+                    1480,
+                    389,
+                    1480,
+                    470,
+                    298,
+                    470
+                ],
+                "score": 0.96
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    293,
+                    1439,
+                    1483,
+                    1439,
+                    1483,
+                    1521,
+                    293,
+                    1521
+                ],
+                "score": 0.949
+            },
+            {
+                "category_id": 0,
+                "poly": [
+                    299,
+                    1130,
+                    1400,
+                    1130,
+                    1400,
+                    1186,
+                    299,
+                    1186
+                ],
+                "score": 0.939
+            },
+            {
+                "category_id": 0,
+                "poly": [
+                    297,
+                    1367,
+                    916,
+                    1367,
+                    916,
+                    1414,
+                    297,
+                    1414
+                ],
+                "score": 0.928
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    296,
+                    1548,
+                    946,
+                    1548,
+                    946,
+                    1585,
+                    296,
+                    1585
+                ],
+                "score": 0.924
+            },
+            {
+                "category_id": 0,
+                "poly": [
+                    297,
+                    501,
+                    468,
+                    501,
+                    468,
+                    539,
+                    297,
+                    539
+                ],
+                "score": 0.913
+            },
+            {
+                "category_id": 2,
+                "poly": [
+                    297,
+                    2103,
+                    605,
+                    2103,
+                    605,
+                    2131,
+                    297,
+                    2131
+                ],
+                "score": 0.909
+            },
+            {
+                "category_id": 2,
+                "poly": [
+                    1148,
+                    2101,
+                    1503,
+                    2101,
+                    1503,
+                    2131,
+                    1148,
+                    2131
+                ],
+                "score": 0.906
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    315,
+                    556,
+                    1497,
+                    556,
+                    1497,
+                    598,
+                    315,
+                    598
+                ],
+                "score": 0.905
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    301,
+                    724,
+                    813,
+                    724,
+                    813,
+                    758,
+                    301,
+                    758
+                ],
+                "score": 0.892
+            },
+            {
+                "category_id": 0,
+                "poly": [
+                    291,
+                    200,
+                    1404,
+                    200,
+                    1404,
+                    248,
+                    291,
+                    248
+                ],
+                "score": 0.888
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    291,
+                    294,
+                    1413,
+                    294,
+                    1413,
+                    329,
+                    291,
+                    329
+                ],
+                "score": 0.883
+            },
+            {
+                "category_id": 1,
+                "poly": [
+                    296,
+                    628,
+                    1328,
+                    628,
+                    1328,
+                    678,
+                    296,
+                    678
+                ],
+                "score": 0.715
+            },
+            {
+                "category_id": 0,
+                "poly": [
+                    296,
+                    628,
+                    1328,
+                    628,
+                    1328,
+                    678,
+                    296,
+                    678
+                ],
+                "score": 0.242
+            },
+            {
+                "category_id": 13,
+                "poly": [
+                    718,
+                    906,
+                    850,
+                    906,
+                    850,
+                    938,
+                    718,
+                    938
+                ],
+                "score": 0.29,
+                "latex": "<\\mathtt{m a j o r}>"
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    821.0,
+                    1445.0,
+                    821.0,
+                    1445.0,
+                    858.0,
+                    297.0,
+                    858.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    298.0,
+                    863.0,
+                    1243.0,
+                    863.0,
+                    1243.0,
+                    898.0,
+                    298.0,
+                    898.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    300.0,
+                    903.0,
+                    717.0,
+                    903.0,
+                    717.0,
+                    941.0,
+                    300.0,
+                    941.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    851.0,
+                    903.0,
+                    1458.0,
+                    903.0,
+                    1458.0,
+                    941.0,
+                    851.0,
+                    941.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    293.0,
+                    941.0,
+                    1476.0,
+                    941.0,
+                    1476.0,
+                    987.0,
+                    293.0,
+                    987.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    986.0,
+                    1440.0,
+                    986.0,
+                    1440.0,
+                    1025.0,
+                    297.0,
+                    1025.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    298.0,
+                    1032.0,
+                    683.0,
+                    1032.0,
+                    683.0,
+                    1062.0,
+                    298.0,
+                    1062.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    298.0,
+                    1215.0,
+                    1446.0,
+                    1215.0,
+                    1446.0,
+                    1254.0,
+                    298.0,
+                    1254.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    295.0,
+                    1255.0,
+                    1474.0,
+                    1255.0,
+                    1474.0,
+                    1298.0,
+                    295.0,
+                    1298.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    296.0,
+                    1301.0,
+                    669.0,
+                    1301.0,
+                    669.0,
+                    1334.0,
+                    296.0,
+                    1334.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1637.0,
+                    1166.0,
+                    1637.0,
+                    1166.0,
+                    1668.0,
+                    297.0,
+                    1668.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    299.0,
+                    1671.0,
+                    519.0,
+                    1671.0,
+                    519.0,
+                    1701.0,
+                    299.0,
+                    1701.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    296.0,
+                    1706.0,
+                    1251.0,
+                    1706.0,
+                    1251.0,
+                    1736.0,
+                    296.0,
+                    1736.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    300.0,
+                    1740.0,
+                    486.0,
+                    1740.0,
+                    486.0,
+                    1772.0,
+                    300.0,
+                    1772.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    295.0,
+                    1776.0,
+                    369.0,
+                    1776.0,
+                    369.0,
+                    1802.0,
+                    295.0,
+                    1802.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    298.0,
+                    1810.0,
+                    583.0,
+                    1810.0,
+                    583.0,
+                    1838.0,
+                    298.0,
+                    1838.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    298.0,
+                    1842.0,
+                    1447.0,
+                    1842.0,
+                    1447.0,
+                    1874.0,
+                    298.0,
+                    1874.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1874.0,
+                    421.0,
+                    1874.0,
+                    421.0,
+                    1904.0,
+                    297.0,
+                    1904.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    295.0,
+                    388.0,
+                    1481.0,
+                    388.0,
+                    1481.0,
+                    431.0,
+                    295.0,
+                    431.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    295.0,
+                    435.0,
+                    730.0,
+                    435.0,
+                    730.0,
+                    471.0,
+                    295.0,
+                    471.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    1442.0,
+                    1487.0,
+                    1442.0,
+                    1487.0,
+                    1481.0,
+                    297.0,
+                    1481.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    298.0,
+                    1486.0,
+                    805.0,
+                    1486.0,
+                    805.0,
+                    1521.0,
+                    298.0,
+                    1521.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    295.0,
+                    1132.0,
+                    439.0,
+                    1132.0,
+                    439.0,
+                    1181.0,
+                    295.0,
+                    1181.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    498.0,
+                    1136.0,
+                    1399.0,
+                    1136.0,
+                    1399.0,
+                    1184.0,
+                    498.0,
+                    1184.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    296.0,
+                    1371.0,
+                    446.0,
+                    1371.0,
+                    446.0,
+                    1410.0,
+                    296.0,
+                    1410.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    499.0,
+                    1374.0,
+                    913.0,
+                    1374.0,
+                    913.0,
+                    1412.0,
+                    499.0,
+                    1412.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    298.0,
+                    1550.0,
+                    944.0,
+                    1550.0,
+                    944.0,
+                    1583.0,
+                    298.0,
+                    1583.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    298.0,
+                    505.0,
+                    466.0,
+                    505.0,
+                    466.0,
+                    536.0,
+                    298.0,
+                    536.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    300.0,
+                    2106.0,
+                    606.0,
+                    2106.0,
+                    606.0,
+                    2131.0,
+                    300.0,
+                    2131.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    1150.0,
+                    2105.0,
+                    1502.0,
+                    2105.0,
+                    1502.0,
+                    2130.0,
+                    1150.0,
+                    2130.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    310.0,
+                    559.0,
+                    1496.0,
+                    559.0,
+                    1496.0,
+                    598.0,
+                    310.0,
+                    598.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    298.0,
+                    725.0,
+                    814.0,
+                    725.0,
+                    814.0,
+                    757.0,
+                    298.0,
+                    757.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    295.0,
+                    202.0,
+                    451.0,
+                    202.0,
+                    451.0,
+                    244.0,
+                    295.0,
+                    244.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    499.0,
+                    206.0,
+                    1402.0,
+                    206.0,
+                    1402.0,
+                    245.0,
+                    499.0,
+                    245.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    297.0,
+                    297.0,
+                    1415.0,
+                    297.0,
+                    1415.0,
+                    328.0,
+                    297.0,
+                    328.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    298.0,
+                    632.0,
+                    448.0,
+                    632.0,
+                    448.0,
+                    671.0,
+                    298.0,
+                    671.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    500.0,
+                    634.0,
+                    1328.0,
+                    634.0,
+                    1328.0,
+                    674.0,
+                    500.0,
+                    674.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    298.0,
+                    632.0,
+                    448.0,
+                    632.0,
+                    448.0,
+                    671.0,
+                    298.0,
+                    671.0
+                ],
+                "score": 1.0,
+                "text": ""
+            },
+            {
+                "category_id": 15,
+                "poly": [
+                    500.0,
+                    634.0,
+                    1328.0,
+                    634.0,
+                    1328.0,
+                    674.0,
+                    500.0,
+                    674.0
+                ],
+                "score": 1.0,
+                "text": ""
+            }
+        ],
+        "page_info": {
+            "page_no": 9,
+            "height": 2200,
+            "width": 1700
+        }
+    }
+]
